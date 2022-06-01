@@ -1,0 +1,119 @@
+:root {
+  --primary-grey: rgba(25, 32, 29, 1);
+  --bg-color: #edfff7;
+}
+
+* {
+  padding: 0;
+  margin: 0;
+  box-sizing: border-box;
+}
+
+body {
+  margin: 0;
+  font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", "Roboto", "Oxygen",
+    "Ubuntu", "Cantarell", "Fira Sans", "Droid Sans", "Helvetica Neue",
+    sans-serif;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+  background-color: var(--bg-color);
+  overflow: hidden;
+}
+
+code {
+  font-family: source-code-pro, Menlo, Monaco, Consolas, "Courier New",
+    monospace;
+}
+
+.bg-primary1 {
+  background-color: var(--primary-grey);
+}
+
+.br-4 {
+  border-radius: 4px;
+}
+
+.transparent {
+  background-color: transparent;
+}
+
+.fg-white {
+  color: white;
+}
+.bg-white {
+  background-color: white;
+}
+
+.fg-dark1 {
+  color: rgba(19, 21, 40, 1);
+}
+
+.block {
+  display: block;
+}
+
+.f20 {
+  font-size: 20px;
+}
+
+.f14 {
+  font-size: 14px;
+}
+
+.flex,
+.center {
+  display: flex;
+}
+
+.center {
+  justify-content: center;
+  align-items: center;
+}
+
+.hover:hover {
+  opacity: 0.8;
+}
+
+button {
+  cursor: pointer;
+}
+
+.justify-between {
+  justify-content: space-between;
+}
+
+.align-center {
+  align-items: center;
+}
+
+.pointer {
+  cursor: pointer;
+}
+
+.transform-upper {
+  text-transform: uppercase;
+}
+
+.f12 {
+  font-size: 12px;
+}
+
+.fg-grey5 {
+  color: rgba(111, 121, 117, 1);
+}
+
+.font-std {
+  font-family: "Circular Std";
+}
+
+ul {
+  list-style-type: none;
+}
+
+a {
+  text-decoration: none;
+}
+
+.fg-dark7 {
+  color: rgba(218, 223, 221, 1);
+}
