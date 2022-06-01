@@ -1,12 +1,18 @@
 import logo from "./logo.svg";
-import { Dashbaord, AddNewProduct } from "./pages";
+import React from "react";
+// import { Signin } from "./pages/Signin";
+import { Dashbaord, AddNewProduct, Signin } from "./pages";
 import { BrowserRouter, Route, Routes } from "react-router-dom";
 import dash from "./pages/Dashboard";
 
 function App() {
   return (
     <BrowserRouter>
-      <AddNewProduct />;
+      <Routes>
+        <Route path="/" element={<Signin />}></Route>
+        <Route path="add-new-product" element={<AddNewProduct />} />
+        <Route path="dashboard" element={<Dashbaord />} />
+      </Routes>
     </BrowserRouter>
   );
 }
