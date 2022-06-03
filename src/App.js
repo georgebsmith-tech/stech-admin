@@ -1,7 +1,13 @@
 import logo from "./logo.svg";
 import React from "react";
 // import { Signin } from "./pages/Signin";
-import { Dashbaord, AddNewProduct, Signin, StocksInventory } from "./pages";
+import {
+  Dashbaord,
+  AddNewProduct,
+  Signin,
+  StocksInventory,
+  CustomerProfile,
+} from "./pages";
 import { BrowserRouter, Route, Routes } from "react-router-dom";
 import dash from "./pages/Dashboard";
 
@@ -13,6 +19,7 @@ function App() {
         <Route path="add-new-product" element={<AddNewProduct />} />
         <Route path="dashboard" element={<Dashbaord />} />
         <Route path="stocks-inventory" element={<StocksInventory />} />
+        <Route path="customer-profile" element={<CustomerProfile />} />
       </Routes>
     </BrowserRouter>
   );

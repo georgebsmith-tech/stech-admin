@@ -7,6 +7,7 @@
   padding: 0;
   margin: 0;
   box-sizing: border-box;
+  font-family: "Circular Std";
 }
 
 body {
@@ -32,6 +33,15 @@ code {
 .br-4 {
   border-radius: 4px;
 }
+.br-8 {
+  border-radius: 8px;
+}
+.fw500 {
+  font-weight: 500;
+}
+.f16 {
+  font-size: 16px;
+}
 
 .transparent {
   background-color: transparent;
@@ -47,6 +57,9 @@ code {
 .fg-dark1 {
   color: rgba(19, 21, 40, 1);
 }
+.fg-grey1 {
+  color: rgba(25, 32, 29, 1);
+}
 
 .block {
   display: block;
@@ -55,14 +68,28 @@ code {
 .f20 {
   font-size: 20px;
 }
+.fw700 {
+  font-weight: 700;
+}
 
 .f14 {
   font-size: 14px;
 }
 
 .flex,
-.center {
+.center,
+.flex-col {
   display: flex;
+}
+.flex-col {
+  flex-direction: column;
+}
+
+.flex-wrap {
+  flex-wrap: wrap;
+}
+.fg-dark2 {
+  color: rgba(81, 84, 118, 1);
 }
 
 .center {
@@ -92,6 +119,9 @@ button {
 
 .transform-upper {
   text-transform: uppercase;
+}
+.bd-grey4 {
+  border: 1px solid rgba(111, 121, 117, 1);
 }
 
 .f12 {

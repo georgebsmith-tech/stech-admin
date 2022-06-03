@@ -4,3 +4,7 @@ export * from "./FormElements/Input";
 export * from "./FormElements/Select";
 export * from "./Layouts/MainLayout";
 export * from "./StocksInventoryContent";
+export * from "./CustomerProfileContent";
+export * from "./Helpers/GoBack";
+export * from "./FormElements/Button";
+export * from "./Profile/ProfileDetails";
