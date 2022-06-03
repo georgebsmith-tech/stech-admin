@@ -1,4 +1,5 @@
 import React from "react";
+import { Link } from "react-router-dom";
 
 export default function Details() {
   return (
@@ -8,12 +9,12 @@ export default function Details() {
       </section>
       <section className="formact">
         <div className="type">
-          <p>Email Address</p>
+          <label>Email Address</label>
           <input type="text" placeholder="hello@company.com"></input>
         </div>
 
         <div className="type pist">
-          <p>Password</p>
+          <label>Password</label>
           <div className="pistHold">
             <input type="password" placeholder="Your Password"></input>
             <img src="./images/see.svg" />
@@ -21,15 +22,22 @@ export default function Details() {
         </div>
         <div className="forgot">
           <p>
-            Forgot Password?<span className="reset"> Reset</span>
+            Forgot Password?
+            <Link to="/reset-password" className="reset">
+              {" "}
+              Reset
+            </Link>
           </p>
         </div>
-        <div className="put">
+        <button className="put">
           <p>Log in</p>
-        </div>
+        </button>
         <div className="new">
           <p>
-            New to Gotru? <span className="reset"> Sign up</span>
+            New to Gotru?
+            <Link to="/sign-up" className="reset">
+              Sign up
+            </Link>
           </p>
         </div>
         <div className="copy">
