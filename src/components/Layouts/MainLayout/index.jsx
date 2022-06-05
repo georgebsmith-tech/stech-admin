@@ -7,7 +7,16 @@ export const MainLayout = ({ children }) => {
     <div className="flex">
       <MainNav />
 
-      <main style={{ padding: "32px 75px", width: "100%" }}>{children}</main>
+      <main
+        style={{
+          padding: "32px 75px",
+          width: "100%",
+          height: "100vh",
+          overflow: "auto",
+        }}
+      >
+        {children}
+      </main>
     </div>
   );
 };

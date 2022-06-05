@@ -1,5 +1,10 @@
 import React from "react";
+import { DashboardContent, MainLayout } from "../../components";
 
 export const Dashbaord = () => {
-  return <div>Add New Product</div>;
+  return (
+    <MainLayout>
+      <DashboardContent />
+    </MainLayout>
+  );
 };

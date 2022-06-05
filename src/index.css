@@ -7,6 +7,7 @@
   padding: 0;
   margin: 0;
   box-sizing: border-box;
+  font-family: "Circular Std";
 }
 
 body {
@@ -24,6 +25,17 @@ code {
   font-family: source-code-pro, Menlo, Monaco, Consolas, "Courier New",
     monospace;
 }
+.bg-dark6 {
+  background-color: rgba(219, 226, 223, 1);
+}
+tr:hover {
+  background-color: whitesmoke;
+}
+table,
+th,
+td {
+  border-collapse: collapse;
+}
 
 .bg-primary1 {
   background-color: var(--primary-grey);
@@ -31,6 +43,19 @@ code {
 
 .br-4 {
   border-radius: 4px;
+}
+.br-8 {
+  border-radius: 8px;
+}
+.fw500 {
+  font-weight: 500;
+}
+.f16 {
+  font-size: 16px;
+}
+
+.f32 {
+  font-size: 32px;
 }
 
 .transparent {
@@ -47,6 +72,9 @@ code {
 .fg-dark1 {
   color: rgba(19, 21, 40, 1);
 }
+.fg-grey1 {
+  color: rgba(25, 32, 29, 1);
+}
 
 .block {
   display: block;
@@ -55,14 +83,28 @@ code {
 .f20 {
   font-size: 20px;
 }
+.fw700 {
+  font-weight: 700;
+}
 
 .f14 {
   font-size: 14px;
 }
 
 .flex,
-.center {
+.center,
+.flex-col {
   display: flex;
+}
+.flex-col {
+  flex-direction: column;
+}
+
+.flex-wrap {
+  flex-wrap: wrap;
+}
+.fg-dark2 {
+  color: rgba(81, 84, 118, 1);
 }
 
 .center {
@@ -92,6 +134,9 @@ button {
 
 .transform-upper {
   text-transform: uppercase;
+}
+.bd-grey4 {
+  border: 1px solid rgba(111, 121, 117, 1);
 }
 
 .f12 {
@@ -303,6 +348,7 @@ a {
   color: #fff;
 }
 
+
 .regsec {
   background-color: #fff;
   margin-top: 90px;
@@ -501,4 +547,23 @@ th {
 
   color: #444a47;
   cursor: pointer;
+
+.grid3 {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  /* grid-template-rows: 160px; */
+  column-gap: 20px;
+}
+
+.bg-grey1 {
+  background-color: rgba(25, 32, 29, 1);
+}
+
+.f18 {
+  font-size: 18px;
+}
+
+.relative {
+  position: relative;
+
 }
