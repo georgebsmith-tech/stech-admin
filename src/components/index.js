@@ -8,3 +8,7 @@ export * from "./CustomerProfileContent";
 export * from "./Helpers/GoBack";
 export * from "./FormElements/Button";
 export * from "./Profile/ProfileDetails";
+export * from "./ProductSalesRecord";
+export * from "./DashboardContent";
+export * from "./OutOfStock";
+export * from "./modals/RegisterUserModal";

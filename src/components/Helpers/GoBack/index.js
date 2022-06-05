@@ -1,4 +1,4 @@
-import Raect from "react";
+import React from "react";
 export const GoBack = () => (
   <div style={{ marginBottom: 18 }} className="flex align-center pointer hover">
     <img

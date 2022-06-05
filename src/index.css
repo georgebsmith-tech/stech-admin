@@ -25,6 +25,17 @@ code {
   font-family: source-code-pro, Menlo, Monaco, Consolas, "Courier New",
     monospace;
 }
+.bg-dark6 {
+  background-color: rgba(219, 226, 223, 1);
+}
+tr:hover {
+  background-color: whitesmoke;
+}
+table,
+th,
+td {
+  border-collapse: collapse;
+}
 
 .bg-primary1 {
   background-color: var(--primary-grey);
@@ -41,6 +52,10 @@ code {
 }
 .f16 {
   font-size: 16px;
+}
+
+.f32 {
+  font-size: 32px;
 }
 
 .transparent {
@@ -331,4 +346,23 @@ a {
 
 .white > span {
   color: #fff;
+}
+
+.grid3 {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  /* grid-template-rows: 160px; */
+  column-gap: 20px;
+}
+
+.bg-grey1 {
+  background-color: rgba(25, 32, 29, 1);
+}
+
+.f18 {
+  font-size: 18px;
+}
+
+.relative {
+  position: relative;
 }
