@@ -348,7 +348,6 @@ a {
   color: #fff;
 }
 
-
 .regsec {
   background-color: #fff;
   margin-top: 90px;
@@ -547,6 +546,7 @@ th {
 
   color: #444a47;
   cursor: pointer;
+}
 
 .grid3 {
   display: grid;
@@ -565,5 +565,4 @@ th {
 
 .relative {
   position: relative;
-
 }
