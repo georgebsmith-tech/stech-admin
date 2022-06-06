@@ -5,12 +5,14 @@ import {
   Dashbaord,
   AddNewProduct,
   Signin,
+  RegisterMember,
   StocksInventory,
   AttendanceHistory,
   CustomerProfile,
 } from "./pages";
 import { BrowserRouter, Route, Routes } from "react-router-dom";
 import dash from "./pages/Dashboard";
+import { Register } from "./components/FormElements/Register";
 
 function App() {
   return (
@@ -22,7 +24,7 @@ function App() {
         <Route path="stocks-inventory" element={<StocksInventory />} />
 
         <Route path="attendance" element={<AttendanceHistory />} />
-
+        <Route path="register-member" element={<RegisterMember />} />
         <Route path="customer-profile" element={<CustomerProfile />} />
       </Routes>
     </BrowserRouter>

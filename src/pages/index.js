@@ -6,4 +6,4 @@ export * from "./StocksInventory";
 export * from "./AttendanceHistory";
 
 export * from "./CustomerProfile";
-
+export * from "./RegisterMember";

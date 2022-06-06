@@ -12,3 +12,4 @@ export * from "./ProductSalesRecord";
 export * from "./DashboardContent";
 export * from "./OutOfStock";
 export * from "./modals/RegisterUserModal";
+export * from "./MemberDeal";
