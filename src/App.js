@@ -5,13 +5,15 @@ import {
   Dashbaord,
   AddNewProduct,
   Signin,
-  StocksInventory,
   AttendanceHistory,
+  StocksInventory,
+  Attendance,
   CustomerProfile,
   ManageUsers,
 } from "./pages";
 import { BrowserRouter, Route, Routes } from "react-router-dom";
 import dash from "./pages/Dashboard";
+import { Register } from "./components/AttendanceContent";
 
 function App() {
   return (
@@ -21,7 +23,10 @@ function App() {
         <Route path="add-new-product" element={<AddNewProduct />} />
         <Route path="dashboard" element={<Dashbaord />} />
         <Route path="stocks-inventory" element={<StocksInventory />} />
-        <Route path="attendance" element={<AttendanceHistory />} />
+        <Route path="attendance" element={<Attendance />} />
+
+        <Route path="attendance-history" element={<AttendanceHistory />} />
+
         <Route path="customer-profile" element={<CustomerProfile />} />
         <Route path="manage-users" element={<ManageUsers />} />
       </Routes>
