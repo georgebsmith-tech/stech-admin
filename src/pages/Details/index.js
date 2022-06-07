@@ -1,10 +1,11 @@
 import React, { useState } from "react";
 import toast, { Toaster } from "react-hot-toast";
-export default function Details() {
+import { useNavigate } from "react-router-dom";
+export default function Details({}) {
   const [email, setEmail] = useState("");
 
+  const navigate = useNavigate();
   const [password, setPassword] = useState("");
-  const [message, setMessage] = useState("");
 
   const body = {
     email,
@@ -15,7 +16,11 @@ export default function Details() {
   function login() {
     if (!email || !password) {
       notify("Email and Password are required!");
+      return;
     }
+
+    navigate("/dashboard");
+
     console.log(body);
   }
 
