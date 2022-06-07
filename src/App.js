@@ -8,6 +8,7 @@ import {
   StocksInventory,
   AttendanceHistory,
   CustomerProfile,
+  ManageUsers,
 } from "./pages";
 import { BrowserRouter, Route, Routes } from "react-router-dom";
 import dash from "./pages/Dashboard";
@@ -20,10 +21,9 @@ function App() {
         <Route path="add-new-product" element={<AddNewProduct />} />
         <Route path="dashboard" element={<Dashbaord />} />
         <Route path="stocks-inventory" element={<StocksInventory />} />
-
         <Route path="attendance" element={<AttendanceHistory />} />
-
         <Route path="customer-profile" element={<CustomerProfile />} />
+        <Route path="manage-users" element={<ManageUsers />} />
       </Routes>
     </BrowserRouter>
   );
