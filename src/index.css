@@ -165,7 +165,7 @@ a {
 
 .firstmain {
   background: #19201d;
-  height: 140vh;
+  min-height: 100vh;
   display: flex;
   /* overflow-y: scroll; */
 }
@@ -215,11 +215,8 @@ a {
   margin-top: 86px;
 }
 
-.type {
+.type > label {
   display: block;
-}
-
-.type > p {
   font-family: "Circular Std";
   font-style: normal;
   font-weight: 450;
@@ -267,13 +264,16 @@ a {
 .pistHold > img {
   width: 20px;
   margin-right: 20px;
+  cursor: pointer;
 }
 
 .pistHold > input {
   background-color: #19201d;
+  color: #fff;
   border: none;
   outline: none;
   margin-left: 20px;
+  width: 80%;
 }
 
 .pist {
@@ -288,9 +288,10 @@ a {
 
 .reset {
   color: #40916c;
+  /* cursor: pointer; */
 }
 
-.put {
+.puts {
   margin-top: 32px;
   width: 480px;
   height: 56px;
@@ -303,7 +304,7 @@ a {
   border: 1px solid #fff;
 }
 
-.put > p {
+.puts > p {
   font-family: "Circular Std";
   font-style: normal;
   font-weight: 600;
