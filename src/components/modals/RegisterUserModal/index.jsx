@@ -57,6 +57,7 @@ export const RegisterUserModal = ({ closeModal, isOpen }) => (
               </div>
             </div>
           </div>
+          <button className="confirm">Confirm Time Change</button>
         </div>
       </section>
     </div>
