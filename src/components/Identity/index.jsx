@@ -1,4 +1,5 @@
 import React from "react";
+import { Link } from "react-router-dom";
 
 export const Identity = ({
   sn,
@@ -18,8 +19,10 @@ export const Identity = ({
       <td>{remark}</td>
       <td>{depart}</td>
       <td>{contact}</td>
-      <td>
-        <button>{view}</button>
+      <td className="table-view">
+        <Link to="/attendance-history" className="br-4">
+          {view}
+        </Link>
       </td>
     </>
   );

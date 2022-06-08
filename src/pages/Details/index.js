@@ -1,21 +1,68 @@
-import React from "react";
+import React, { useState } from "react";
+import toast, { Toaster } from "react-hot-toast";
+import { useNavigate } from "react-router-dom";
+export default function Details({}) {
+  const [email, setEmail] = useState("");
 
-export default function Details() {
+  const navigate = useNavigate();
+  const [password, setPassword] = useState("");
+
+  const body = {
+    email,
+    password,
+  };
+  const notify = (message) => toast(message);
+
+  function login() {
+    if (!email || !password) {
+      notify("Email and Password are required!");
+      return;
+    }
+
+    navigate("/dashboard");
+
+    console.log(body);
+  }
+
   return (
     <section className="login">
+      <Toaster
+        toastOptions={{
+          className: "",
+          style: {
+            border: "1px solid rgba(145, 64, 64, 1)",
+            padding: "16px",
+            color: "rgba(145, 64, 64, 1)",
+          },
+        }}
+      />
       <section className="manage">
         <h3>Login to manage your company</h3>
       </section>
       <section className="formact">
         <div className="type">
           <p>Email Address</p>
-          <input type="text" placeholder="hello@company.com"></input>
+          <input
+            type="text"
+            placeholder="hello@company.com"
+            value={email}
+            onChange={(e) => {
+              setEmail(e.target.value);
+            }}
+          />
         </div>
 
         <div className="type pist">
           <p>Password</p>
           <div className="pistHold">
-            <input type="password" placeholder="Your Password"></input>
+            <input
+              type="password"
+              placeholder="Your Password"
+              value={password}
+              onChange={(e) => {
+                setPassword(e.target.value);
+              }}
+            ></input>
             <img src="./images/see.svg" />
           </div>
         </div>
@@ -24,7 +71,7 @@ export default function Details() {
             Forgot Password?<span className="reset"> Reset</span>
           </p>
         </div>
-        <div className="put">
+        <div className="put" onClick={login}>
           <p>Log in</p>
         </div>
         <div className="new">

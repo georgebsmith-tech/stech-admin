@@ -1,12 +1,13 @@
 import React from "react";
-import { Input } from "../..";
-export const RegisterUserModal = ({ closeModal, isOpen }) => (
+export const EditTimeModal = ({ closeModal, isOpen }) => (
   <div
     style={{
       position: "fixed",
       width: "100vw",
       height: "100vh",
       backgroundColor: "rgba(0, 0, 0, 0.25)",
+      top: 0,
+      left: 0,
       display: isOpen ? "flex" : "none",
     }}
     className="center z"
@@ -26,10 +27,6 @@ export const RegisterUserModal = ({ closeModal, isOpen }) => (
             <img src="./images/bad.svg" />
           </button>
         </div>
-      </div>
-      <div className="flex" style={{ columnGap: 55 }}>
-        <Input title="First Name" placeholder="First Name" />
-        <Input title="First Name" placeholder="First Name" />
       </div>
 
       <section className="twotime">
@@ -62,7 +59,6 @@ export const RegisterUserModal = ({ closeModal, isOpen }) => (
               </div>
             </div>
           </div>
-          <button className="confirm">Confirm Time Change</button>
         </div>
       </section>
     </div>

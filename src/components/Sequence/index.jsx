@@ -1,12 +1,11 @@
 import React from "react";
-import { Link } from "react-router-dom";
-import { Identity } from "../../Identity";
+import { Identity } from "../Identity";
 
-export const Sequence = ({ sn }) => {
+export const Sequence = () => {
   return (
     <tr>
       <Identity
-        sn={sn}
+        sn={"1"}
         names={"Emmanuel Joseph"}
         percent={"90/100"}
         remark={"Fair"}

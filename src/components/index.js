@@ -12,4 +12,6 @@ export * from "./ProductSalesRecord";
 export * from "./DashboardContent";
 export * from "./OutOfStock";
 export * from "./modals/RegisterUserModal";
-export * from "./MemberDeal";
+export * from "./ManageUsersContent";
+export * from "./AttendanceHistoryContent";
+export * from "./AttendanceContent";

@@ -1,6 +1,6 @@
 import React from "react";
 
-export const MemberDeal = () => {
+export const AttendanceHistoryContent = () => {
   return (
     <section>
       <img src="./images/go.svg" />

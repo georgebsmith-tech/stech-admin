@@ -1,10 +1,10 @@
 import React from "react";
 
-export const EditTime = () => {
+export const EditTime = ({ changeModalState }) => {
   return (
     <section className="editback">
       <div className="editimg">
-        <div className="editsv">
+        <div className="editsv" onClick={() => changeModalState(true)}>
           <img src="./images/edition.svg" />
           <h6>Edit Time</h6>
         </div>

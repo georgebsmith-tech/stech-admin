@@ -350,7 +350,7 @@ a {
 
 .regsec {
   background-color: #fff;
-  margin-top: 90px;
+  margin-top: 40px;
 }
 
 .dotholder {
@@ -449,12 +449,10 @@ table {
   line-height: 18px; */
 }
 
-td > button {
-  width: 60px;
-  height: 30px;
+.table-view > a {
+  padding: 6px 14px;
   background-color: #19201d;
   border: 1px solid #19201d;
-  border-radius: 4px;
   color: #ffff;
 }
 
@@ -472,7 +470,7 @@ tr {
   width: 100%;
   display: flex;
 
-  margin-top: 432px;
+  margin-top: 100px;
 
   justify-content: flex-end;
 }

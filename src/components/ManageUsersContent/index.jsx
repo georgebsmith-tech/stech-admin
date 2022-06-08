@@ -1,24 +1,9 @@
 import React, { useState } from "react";
 import { Link } from "react-router-dom";
 import { Sequence } from "../Sequence";
-import { EditTime } from "../../EditTime";
+import { EditTime } from "../EditTime";
 
-// function EditTime() {
-//   return (
-//     <section>
-//       <div>
-//         <img src="./images/edition.svg" />
-//         <h6>Edit Time</h6>
-//       </div>
-//       <div>
-//         <img src="./images/printrep.svg" />
-//         <h6>Print Report</h6>
-//       </div>
-//     </section>
-//   );
-// }
-
-export const Register = () => {
+export const ManageUsersContent = () => {
   const [editIsOpen, setEditIsOpen] = useState(false);
 
   const changeEditState = () => {
