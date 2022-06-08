@@ -246,7 +246,7 @@ a {
   /* cursor: pointer; */
 }
 
-.put {
+.puts {
   margin-top: 32px;
   width: 480px;
   height: 56px;
@@ -259,7 +259,7 @@ a {
   border: 1px solid #fff;
 }
 
-.put > p {
+.puts > p {
   font-family: "Circular Std";
   font-style: normal;
   font-weight: 600;

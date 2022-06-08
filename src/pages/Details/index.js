@@ -24,12 +24,11 @@ export default function Details() {
           <p>
             Forgot Password?
             <Link to="/reset-password" className="reset">
-              {" "}
               Reset
             </Link>
           </p>
         </div>
-        <button className="put">
+        <button className="puts">
           <p>Log in</p>
         </button>
         <div className="new">
