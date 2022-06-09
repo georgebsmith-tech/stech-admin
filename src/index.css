@@ -200,7 +200,7 @@ a {
   display: flex;
   flex-direction: column;
   align-items: center;
-  margin-top: 235px;
+  margin-top: 120px;
 }
 
 .manage {
@@ -326,7 +326,7 @@ a {
   display: flex;
   align-items: center;
   flex-direction: column;
-  margin-top: 170px;
+  margin-top: 150px;
 }
 
 .copy > p {
@@ -521,7 +521,8 @@ th {
   background-color: #fff;
   position: absolute;
   width: 200px;
-  height: 109px;
+  /* height: 109px; */
+  padding-bottom: 24px;
 
   border: 1px solid #dbe2df;
   box-shadow: 0px 2px 16px rgba(142, 167, 192, 0.24);
@@ -830,4 +831,8 @@ th {
   margin-top: 33px;
   display: flex;
   column-gap: 24px;
+}
+
+.justify-end {
+  justify-content: flex-end;
 }

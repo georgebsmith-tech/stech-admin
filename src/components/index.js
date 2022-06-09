@@ -15,3 +15,6 @@ export * from "./modals/RegisterUserModal";
 export * from "./ManageUsersContent";
 export * from "./AttendanceHistoryContent";
 export * from "./AttendanceContent";
+export * from "./modals//ConfigureUserTableModal";
+export * from "./FormElements/InputWithVis";
+export * from "./ManageUserDropDown";
