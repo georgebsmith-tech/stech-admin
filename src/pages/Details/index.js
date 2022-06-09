@@ -1,3 +1,5 @@
+
+import { Link } from "react-router-dom";
 import React, { useState } from "react";
 import toast, { Toaster } from "react-hot-toast";
 import { useNavigate } from "react-router-dom";
@@ -24,6 +26,7 @@ export default function Details({}) {
     console.log(body);
   }
 
+
   return (
     <section className="login">
       <Toaster
@@ -41,6 +44,7 @@ export default function Details({}) {
       </section>
       <section className="formact">
         <div className="type">
+
           <p>Email Address</p>
           <input
             type="text"
@@ -50,10 +54,11 @@ export default function Details({}) {
               setEmail(e.target.value);
             }}
           />
+
         </div>
 
         <div className="type pist">
-          <p>Password</p>
+          <label>Password</label>
           <div className="pistHold">
             <input
               type="password"
@@ -68,15 +73,22 @@ export default function Details({}) {
         </div>
         <div className="forgot">
           <p>
-            Forgot Password?<span className="reset"> Reset</span>
+            Forgot Password?
+            <Link to="/reset-password" className="reset">
+              Reset
+            </Link>
           </p>
         </div>
-        <div className="put" onClick={login}>
-          <p>Log in</p>
-        </div>
+
+        <button className="puts put" onClick={login}>
+         Log in
+        </button>
         <div className="new">
           <p>
-            New to Gotru? <span className="reset"> Sign up</span>
+            New to Gotru?
+            <Link to="/sign-up" className="reset">
+              Sign up
+            </Link>
           </p>
         </div>
         <div className="copy">

@@ -1,63 +1,159 @@
 import React, { useState } from "react";
 import { Link } from "react-router-dom";
-import { Sequence } from "../Sequence";
-import { EditTime } from "../EditTime";
+
+import { ManageUserDropDown } from "..";
+import { ConfigureUserTableModal } from "../modals/ConfigureUserTableModal";
 
 export const ManageUsersContent = () => {
   const [editIsOpen, setEditIsOpen] = useState(false);
+  const [configureTableIsOpen, setConfigureTableIsOpen] = useState(false);
 
   const changeEditState = () => {
     setEditIsOpen(!editIsOpen);
   };
 
   return (
-    <section className="regsec">
-      <div className="dotholder">
-        <h3>Attendance Register</h3>
-        <div className="threed">
-          <button>Print Report</button>
-          <div>
-            {editIsOpen && <EditTime />}
-            <button onClick={changeEditState}>
-              <img src="./images/3dots.svg"></img>
-            </button>
+    <>
+      <section className="regsec">
+        <div className="dotholder">
+          <h3>Attendance Register</h3>
+          <div className="threed">
+            <button>Print Report</button>
+            <div>
+              {editIsOpen && (
+                <ManageUserDropDown
+                  setConfigureTableIsOpen={setConfigureTableIsOpen}
+                />
+              )}
+              <button onClick={changeEditState}>
+                <img src="./images/3dots.svg"></img>
+              </button>
+            </div>
           </div>
         </div>
-      </div>
-      <div className="bottom"></div>
+        <div className="bottom"></div>
 
-      <table className="tsec">
-        <thead className="headings">
-          {/* <div className="serial"> */}
-          <th>S/N</th>
-          <th>Name</th>
-          {/* </div> */}
-          {/* <div className="remark"> */}
-          <th>Attendace </th>
-          <th>Remark</th>
-          <th>Department head</th>
-          <th>Dept head’s contact</th>
-          <th>Action</th>
-          {/* </div> */}
-        </thead>
-        <tbody className="tbt">
-          <Sequence />
+        <table className="tsec">
+          <thead className="headings">
+            {/* <div className="serial"> */}
+            <th>S/N</th>
+            <th>Name of user</th>
+            {/* </div> */}
+            {/* <div className="remark"> */}
+            <th>Date Joined </th>
+            <th>Class/Department</th>
+            <th>Level</th>
+            <th>Attendance</th>
+            <th>Total Spent</th>
+            <th>Action</th>
 
-          <Sequence />
+            {/* </div> */}
+          </thead>
+          <tbody className="tbt">
+            {[1, 2, 3, 4, 4, 5, 3, 53, 4, 5].map((user, idx) => (
+              <tr key={idx}>
+                <td
+                  style={{
+                    paddingTop: 12,
+                    paddingBottom: 12,
+                    paddingLeft: 32,
+                  }}
+                  className="fg-grey1"
+                >
+                  {idx * 1 + 1}
+                </td>
+                <td
+                  style={{
+                    paddingTop: 12,
 
-          <Sequence />
+                    paddingBottom: 12,
+                  }}
+                  className="fg-grey1"
+                >
+                  Emeka Julius Favour
+                </td>
+                <td
+                  style={{
+                    paddingTop: 12,
 
-          <Sequence />
-        </tbody>
-      </table>
+                    paddingBottom: 12,
+                  }}
+                  className="fg-grey1"
+                >
+                  12, Jun 2011
+                </td>
+                <td
+                  style={{
+                    paddingTop: 12,
 
-      <section className="next">
-        <div className="backfront">
-          <img src="./images/back.svg"></img>
-          <p>1</p>
-          <img src="./images/front.svg"></img>
-        </div>
+                    paddingBottom: 12,
+                  }}
+                  className="fg-grey1"
+                >
+                  Deparment one
+                </td>
+                <td
+                  style={{
+                    paddingTop: 12,
+
+                    paddingBottom: 12,
+                  }}
+                  className="fg-grey1"
+                >
+                  Senior
+                </td>
+                <td
+                  style={{
+                    paddingTop: 12,
+
+                    paddingBottom: 12,
+                  }}
+                  className="fg-grey1"
+                >
+                  90/100
+                </td>
+                <td
+                  style={{
+                    paddingTop: 12,
+
+                    paddingBottom: 12,
+                  }}
+                  className="fg-grey1"
+                >
+                  ₦ 23,999.00
+                </td>
+                <td
+                  style={{
+                    paddingTop: 12,
+
+                    paddingBottom: 12,
+                  }}
+                  className=""
+                >
+                  <span
+                    className="fg-white bg-grey1 center br-4 f14"
+                    style={{ padding: "6px 14px" }}
+                  >
+                    More
+                  </span>
+                </td>
+              </tr>
+            ))}
+          </tbody>
+        </table>
+
+        <section className="next">
+          <div className="backfront">
+            <img src="./images/back.svg"></img>
+            <p>1</p>
+            <img src="./images/front.svg"></img>
+          </div>
+        </section>
       </section>
-    </section>
+      <ConfigureUserTableModal
+        isOpen={configureTableIsOpen}
+        closeModal={setConfigureTableIsOpen}
+      />
+    </>
   );
 };
