@@ -54,10 +54,13 @@ export const EditTimeModal = ({ closeModal, isOpen }) => (
             <div>
               <h5>Time out</h5>
               <div className="clock">
-                <input type="text" placeholder="Select date" />
+                <input type="time" placeholder="Select date" />
                 <img src="./images/clock.svg" />
               </div>
             </div>
+          </div>
+          <div className="changetime">
+            <button>Confirm Time Change</button>
           </div>
         </div>
       </section>
