@@ -32,7 +32,7 @@ export const TablerowContent = () => {
         />
       </tr>
       <tr className="weekrecords">
-        <td colSpan={5} className="weekends">
+        <td colspan={5} className="weekends">
           Weekend Sat, Jun 14th & Jun 13th 2021
         </td>
       </tr>

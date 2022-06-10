@@ -1,7 +1,7 @@
 import { React, useState } from "react";
 
 export const Tablerecords = ({ day, timein, timeout, more, hours }) => {
-  const [see, setsee] = useState(true);
+  const [see, setsee] = useState(false);
 
   const seeLess = () => {
     setsee(!see);
@@ -18,7 +18,7 @@ export const Tablerecords = ({ day, timein, timeout, more, hours }) => {
             {timein}
           </span>
         </div>
-        <div className="locate">
+        <div className={`locate ${!see && "hide"}`}>
           <img src="./images/location.svg" />
           <p>16, Joseph street, Ikeja Lagos.</p>
         </div>
@@ -30,7 +30,7 @@ export const Tablerecords = ({ day, timein, timeout, more, hours }) => {
             {timeout}
           </span>
         </div>
-        <div className="locate">
+        <div className={`locate ${!see && "hide"}`}>
           <img src="./images/location.svg" />
           <p>16, Joseph street, Ikeja Lagos.</p>
         </div>
