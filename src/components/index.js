@@ -18,3 +18,6 @@ export * from "./AttendanceContent";
 export * from "./modals//ConfigureUserTableModal";
 export * from "./FormElements/InputWithVis";
 export * from "./ManageUserDropDown";
+export * from "./modals/NewMessageModal";
+export * from "./MessagingContent";
+export * from "./FormElements/SearchInput";

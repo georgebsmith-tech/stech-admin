@@ -16,7 +16,7 @@ export const ManageUsersContent = () => {
     <>
       <section className="regsec">
         <div className="dotholder">
-          <h3>Attendance Register</h3>
+          <h3>Register the ...</h3>
           <div className="threed">
             <button>Print Report</button>
             <div>

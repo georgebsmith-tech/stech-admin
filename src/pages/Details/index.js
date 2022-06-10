@@ -1,4 +1,3 @@
-
 import { Link } from "react-router-dom";
 import React, { useState } from "react";
 import toast, { Toaster } from "react-hot-toast";
@@ -8,6 +7,7 @@ export default function Details({}) {
 
   const navigate = useNavigate();
   const [password, setPassword] = useState("");
+  const [encrypted, setEncrypted] = useState(true);
 
   const body = {
     email,
@@ -26,7 +26,6 @@ export default function Details({}) {
     console.log(body);
   }
 
-
   return (
     <section className="login">
       <Toaster
@@ -44,7 +43,6 @@ export default function Details({}) {
       </section>
       <section className="formact">
         <div className="type">
-
           <p>Email Address</p>
           <input
             type="text"
@@ -54,21 +52,30 @@ export default function Details({}) {
               setEmail(e.target.value);
             }}
           />
-
         </div>
 
         <div className="type pist">
           <label>Password</label>
           <div className="pistHold">
             <input
-              type="password"
+              type={encrypted ? "password" : "text"}
               placeholder="Your Password"
               value={password}
               onChange={(e) => {
                 setPassword(e.target.value);
               }}
             ></input>
-            <img src="./images/see.svg" />
+            {!encrypted ? (
+              <img
+                src="./images/see.svg"
+                onClick={() => setEncrypted(!encrypted)}
+              />
+            ) : (
+              <img
+                src="./images/encrypt.svg"
+                onClick={() => setEncrypted(!encrypted)}
+              />
+            )}
           </div>
         </div>
         <div className="forgot">
@@ -81,7 +88,7 @@ export default function Details({}) {
         </div>
 
         <button className="puts put" onClick={login}>
-         Log in
+          Log in
         </button>
         <div className="new">
           <p>

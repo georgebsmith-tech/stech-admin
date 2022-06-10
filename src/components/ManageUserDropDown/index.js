@@ -3,7 +3,7 @@ import React from "react";
 export const ManageUserDropDown = ({ setConfigureTableIsOpen }) => {
   return (
     <section className="editback">
-      <div className="editimg">
+      <div className="three-dots-drop-down">
         <div
           className="editsv hover"
           onClick={() => setConfigureTableIsOpen(true)}

@@ -41,7 +41,7 @@ export const AttendanceHistoryContent = () => {
       <section className="attendanceHour">
         <div className="avgTime">
           <div className="absent">
-            <div className="leftBD allMG">
+            <div className="allMG">
               <h3>08:08</h3>
               <p>Avg clock in</p>
             </div>
@@ -53,7 +53,7 @@ export const AttendanceHistoryContent = () => {
               <h3>8h 20m</h3>
               <p>Avg attandance hour</p>
             </div>
-            <div className="rightMG allMG">
+            <div className="rightMG allMG leftBD">
               <h3>05</h3>
               <p>Absent/Leaves</p>
             </div>

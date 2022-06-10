@@ -22,47 +22,49 @@ export const ConfigureUserTableModal = ({ closeModal, isOpen }) => (
         e.stopPropagation();
       }}
     >
-      <div className="managemodal">
-        <div className="mana">
-          <h4>Configure Table</h4>
-          <button onClick={() => closeModal(false)} className="bad">
-            <img src="./images/bad.svg" />
-          </button>
+      <div>
+        <div className="managemodal">
+          <div className="mana">
+            <h4>Configure Table</h4>
+            <button onClick={() => closeModal(false)} className="bad">
+              <img src="./images/bad.svg" />
+            </button>
+          </div>
         </div>
-      </div>
-      <div style={{ padding: "0 32px", marginTop: 40 }}>
-        <div
-          style={{
-            columnGap: 32,
-            display: "grid",
-            gridTemplateColumns: "repeat(auto-fill,minmax(220px,1fr))",
-          }}
-        >
-          <InputWithVis placeholder="Null" value="Date created" />
-          <InputWithVis placeholder="Null" />
-          <InputWithVis placeholder="Null" />
-          <InputWithVis placeholder="Null" />
-          <InputWithVis placeholder="Null" />
-          <InputWithVis placeholder="Null" />
-          <InputWithVis placeholder="Null" />
-          <InputWithVis placeholder="Null" />
-          <InputWithVis placeholder="Null" />
-          <InputWithVis placeholder="Null" />
-        </div>
-        <div
-          className="flex justify-end"
-          style={{ columnGap: 24, marginTop: 60 }}
-        >
-          <Button
-            title="Cancel"
-            btnStyles={{ padding: "15px 45px" }}
-            classes="br-4"
-          />
-          <Button
-            title="Save Configuration"
-            classes="bg-grey1 fg-white br-4"
-            btnStyles={{ padding: "15px 39px" }}
-          />
+        <div style={{ padding: "0 32px", marginTop: 40 }}>
+          <div
+            style={{
+              columnGap: 32,
+              display: "grid",
+              gridTemplateColumns: "repeat(auto-fill,minmax(220px,1fr))",
+            }}
+          >
+            <InputWithVis placeholder="Null" value="Date created" />
+            <InputWithVis placeholder="Null" />
+            <InputWithVis placeholder="Null" />
+            <InputWithVis placeholder="Null" />
+            <InputWithVis placeholder="Null" />
+            <InputWithVis placeholder="Null" />
+            <InputWithVis placeholder="Null" />
+            <InputWithVis placeholder="Null" />
+            <InputWithVis placeholder="Null" />
+            <InputWithVis placeholder="Null" />
+          </div>
+          <div
+            className="flex justify-end"
+            style={{ columnGap: 24, marginTop: 60 }}
+          >
+            <Button
+              title="Cancel"
+              btnStyles={{ padding: "15px 45px" }}
+              classes="br-4"
+            />
+            <Button
+              title="Save Configuration"
+              classes="bg-grey1 fg-white br-4"
+              btnStyles={{ padding: "15px 39px" }}
+            />
+          </div>
         </div>
       </div>
     </div>
