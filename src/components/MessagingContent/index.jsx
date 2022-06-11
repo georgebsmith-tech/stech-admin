@@ -46,7 +46,7 @@ export const MessagingContent = () => {
             )}
           </div>
         </section>
-        {true ? (
+        {!true ? (
           <SendGroupMessageView />
         ) : (
           <SelectMessageView openModal={setNewMessageModalIsopen} />

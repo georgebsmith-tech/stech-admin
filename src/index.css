@@ -870,13 +870,13 @@ input[type="time"]::webkit-calendar-picker-indicator:focus
 }
 .avgTime {
   display: flex;
-  box-sizing: border-box;
+  /* box-sizing: border-box; */
   justify-content: center;
 
-  /* width: 1190px; */
-  height: 140px;
-  margin: 40px 32px;
-  width: 100%;
+  margin-left: 32px;
+  margin-top: 40px;
+  margin-right: 32px;
+  margin-bottom: 40px;
 
   background: #ffffff;
 
@@ -891,16 +891,114 @@ input[type="time"]::webkit-calendar-picker-indicator:focus
   margin: 0px 156px;
 }
 .allMG {
-  /* margin-right: 132px; */
-  /* background-color: red; */
+  margin: 44px 0px;
 }
+
+.allMG > h3 {
+  font-family: "Circular Std";
+  font-style: normal;
+  font-weight: 500;
+  font-size: 24px;
+  line-height: 30px;
+  color: #19201d;
+}
+
+.allMG > p {
+  font-family: "Circular Std";
+  font-style: normal;
+  font-weight: 450;
+  font-size: 12px;
+  line-height: 15px;
+  color: #515476;
+}
+
 .leftBD {
   border-left: 1px solid #d5d7e4;
   padding-left: 40px;
 }
 
-.rightMG {
-  /* margin-left: 40px; */
+.temp {
+  display: flex;
+  flex-direction: column;
+}
+
+.redarr {
+  background-color: rgba(189, 35, 35, 0.08);
+  border-radius: 4px;
+  width: 116px;
+}
+
+.redarr > span {
+  display: flex;
+  column-gap: 10px;
+  margin-left: 15px;
+  margin-right: 12px;
+  padding-top: 6px;
+  padding-bottom: 6px;
+}
+
+.greenarr > span {
+  display: flex;
+  column-gap: 10px;
+  margin-left: 15px;
+  margin-right: 12px;
+  padding-top: 6px;
+  padding-bottom: 6px;
+}
+
+.more-or-less {
+  width: 88px;
+  height: 30px;
+
+  border-radius: 4px;
+
+  border: 1px solid #19201d;
+  font-family: "Circular Std";
+  font-style: normal;
+  font-weight: 450;
+  font-size: 14px;
+  line-height: 18px;
+}
+
+.seeMore {
+  background: #19201d;
+
+  color: #fff;
+}
+.seeLess {
+  background: #fff;
+
+  color: #19201d;
+}
+
+.greenarr {
+  background-color: rgba(64, 145, 108, 0.1);
+  border-radius: 4px;
+  width: 116px;
+}
+
+.weekrecords {
+  width: 100%;
+  background: rgba(130, 104, 223, 0.08);
+}
+.weekrecords td {
+  text-align: center;
+}
+
+.locate {
+  display: flex;
+  column-gap: 8.33px;
+  font-family: "Circular Std";
+  font-style: normal;
+  font-weight: 450;
+  font-size: 14px;
+  line-height: 140%;
+  margin-top: 8px;
+
+  color: #40916c;
+}
+.locate > p {
+  width: 114px;
 }
 
 .gridfive {
