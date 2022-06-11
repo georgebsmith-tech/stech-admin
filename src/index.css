@@ -945,18 +945,30 @@ input[type="time"]::webkit-calendar-picker-indicator:focus
   padding-top: 6px;
   padding-bottom: 6px;
 }
-.seeMore {
+
+.more-or-less {
   width: 88px;
   height: 30px;
-  background: #19201d;
+
   border-radius: 4px;
-  color: #fff;
+
   border: 1px solid #19201d;
   font-family: "Circular Std";
   font-style: normal;
   font-weight: 450;
   font-size: 14px;
   line-height: 18px;
+}
+
+.seeMore {
+  background: #19201d;
+
+  color: #fff;
+}
+.seeLess {
+  background: #fff;
+
+  color: #19201d;
 }
 
 .greenarr {
@@ -966,10 +978,11 @@ input[type="time"]::webkit-calendar-picker-indicator:focus
 }
 
 .weekrecords {
-  display: flex;
-  justify-content: center;
   width: 100%;
   background: rgba(130, 104, 223, 0.08);
+}
+.weekrecords td {
+  text-align: center;
 }
 
 .locate {
@@ -1101,6 +1114,21 @@ label {
 
 .fg-grey4 {
   color: rgba(111, 121, 117, 1);
+}
+
+.hover-grey {
+  transition-duration: 0.6s;
+}
+
+.hover-grey:hover {
+  background-color: #f3f3f3;
+  transform: scale(1.08);
+}
+
+.group-chat-wrapper {
+  /* background-color: blue; */
+  height: calc(100% - 88px);
+  justify-content: space-between;
 }
 
 /* input[type="date"]::-webkit-inner-spin-button,

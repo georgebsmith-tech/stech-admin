@@ -1,6 +1,6 @@
 import { React, useState } from "react";
 
-export const Tablerecords = ({ day, timein, timeout, more, hours }) => {
+export const Tablerecords = ({ day, timein, timeout, hours }) => {
   const [see, setsee] = useState(false);
 
   const seeLess = () => {
@@ -37,8 +37,12 @@ export const Tablerecords = ({ day, timein, timeout, more, hours }) => {
       </td>
       <td>{hours}</td>
       <td>
-        <button className="seeMore" onClick={() => setsee(seeLess)}>
-          {more}
+
+        <button
+          className={"more-or-less " + (see ? "seeLess" : "seeMore")}
+          onClick={seeLess}
+        >
+          {see ? "See less" : "See more"}
         </button>
       </td>
     </>
