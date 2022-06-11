@@ -1018,6 +1018,21 @@ label {
   color: rgba(111, 121, 117, 1);
 }
 
+.hover-grey {
+  transition-duration: 0.6s;
+}
+
+.hover-grey:hover {
+  background-color: #f3f3f3;
+  transform: scale(1.08);
+}
+
+.group-chat-wrapper {
+  /* background-color: blue; */
+  height: calc(100% - 88px);
+  justify-content: space-between;
+}
+
 /* input[type="date"]::-webkit-inner-spin-button,
 input[type="date"]::-webkit-calendar-picker-indicator {
   display: none;
