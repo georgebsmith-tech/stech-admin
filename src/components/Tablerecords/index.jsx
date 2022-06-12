@@ -37,6 +37,7 @@ export const Tablerecords = ({ day, timein, timeout, hours }) => {
       </td>
       <td>{hours}</td>
       <td>
+
         <button
           className={"more-or-less " + (see ? "seeLess" : "seeMore")}
           onClick={seeLess}
