@@ -3,6 +3,8 @@ import { Button, NewMessageModal, SearchInput } from "../";
 
 export const MessagingContent = () => {
   const [newMessageModalIsOpen, setNewMessageModalIsopen] = useState(false);
+  const [message, setMessage] = useState("");
+
   return (
     <>
       <div className="flex" style={{ columnGap: 8 }}>
@@ -46,8 +48,8 @@ export const MessagingContent = () => {
             )}
           </div>
         </section>
-        {!true ? (
-          <SendGroupMessageView />
+        {true ? (
+          <SendGroupMessageView newMessage={message} />
         ) : (
           <SelectMessageView openModal={setNewMessageModalIsopen} />
         )}
@@ -84,7 +86,9 @@ const SelectMessageView = ({ openModal }) => {
   );
 };
 
-const SendGroupMessageView = () => {
+const SendGroupMessageView = ({}) => {
+  const [messages, setMessages] = useState([1, 2]);
+  const [newMessage, setNewMessage] = useState("");
   return (
     <section style={{ flex: 0.7, height: "90vh" }} className="bg-white">
       <header
@@ -99,7 +103,13 @@ const SendGroupMessageView = () => {
         </h3>
       </header>
       <div className="flex-col justify-between group-chat-wrapper relative">
-        <main>mmmklmkml</main>
+        <main style={{ height: "100%", overflowY: "auto" }}>
+          <ul style={{ marginTop: 20 }}>
+            {messages.map((message, idx) =>
+              idx % 2 ? <SentMessage /> : <ReceivedMessage />
+            )}
+          </ul>
+        </main>
         <div
           style={{
             padding: "34px 32px",
@@ -110,11 +120,26 @@ const SendGroupMessageView = () => {
         >
           <div>
             <textarea
+              onChange={(e) => setNewMessage(e.target.value)}
+              value={newMessage}
               style={{
                 width: "100%",
                 border: "1px solid rgba(219, 226, 223, 1)",
+                padding: 10,
+                display: "flex",
+                // flex: 1,
               }}
               rows={5}
+            />
+          </div>
+          <div className="flex justify-between" style={{ marginTop: 28 }}>
+            <img src="/images/attach.svg" className="pointer hover" />
+            <img
+              src="/images/send.svg"
+              className="pointer hover"
+              onClick={() =>
+                setMessages([Math.round(Math.random() * 10), ...messages])
+              }
             />
           </div>
         </div>
@@ -123,6 +148,75 @@ const SendGroupMessageView = () => {
   );
 };
 
+const SentMessage = () => (
+  <li
+    style={{
+      marginRight: 24,
+      marginTop: 10,
+      marginBottom: 15,
+      columnGap: 12,
+    }}
+    className="flex justify-end"
+  >
+    <div style={{ maxWidth: "70%" }}>
+      <p
+        className="flex justify-end align-center"
+        style={{ marginBottom: 12, columnGap: 12, marginTop: 6 }}
+      >
+        <span className="fg-dark3 f10">30 mmins ago</span>
+        <span className="fg-dark1 f12 fw500">Emmanuel Jacob</span>
+      </p>
+      <p
+        className="bg-grey1 fg-white f12 br-4"
+        style={{ padding: 16, lineHeight: 1.7 }}
+      >
+        Okay, Can I also make use of the textbook that was attached to the
+        workbook becaus ei am finding it difficult to comprehend, but it is not
+        allowed I dont mind using the internet as well.
+      </p>
+    </div>
+    <div>
+      <img src="/images/avatar.svg" width={24} />
+    </div>
+  </li>
+);
+const ReceivedMessage = () => (
+  <li
+    style={{
+      marginLeft: 24,
+      marginTop: 10,
+      marginBottom: 15,
+      columnGap: 12,
+      flexDirection: "row-reverse",
+    }}
+    className="flex justify-end"
+  >
+    <div style={{ maxWidth: "70%" }}>
+      <p
+        className="flex align-center"
+        style={{ marginBottom: 12, columnGap: 12, marginTop: 6 }}
+      >
+        <span className="fg-dark3 f10">30 mmins ago</span>
+        <span className="fg-dark1 f12 fw500">Emmanuel Jacob</span>
+      </p>
+      <p
+        className="fg-dark2 fg-white f12 br-4"
+        style={{
+          padding: 16,
+          lineHeight: 1.7,
+          backgroundColor: "rgba(247, 247, 250, 1)",
+        }}
+      >
+        Okay, Can I also make use of the textbook that was attached to the
+        workbook becaus ei am finding it difficult to comprehend, but it is not
+        allowed I dont mind using the internet as well.
+      </p>
+    </div>
+    <div>
+      <img src="/images/avatar.svg" width={24} />
+    </div>
+  </li>
+);
 const MessagesList = () => {
   return (
     <ul
