@@ -1,4 +1,5 @@
 import React from "react";
+import { Arrival } from "../Arrival";
 import { TablerowContent } from "../TablerowContent";
 
 export const AttendanceHistoryContent = () => {
@@ -73,6 +74,16 @@ export const AttendanceHistoryContent = () => {
               <TablerowContent />
             </tbody>
           </table>
+
+          <div className="inout">
+            {[
+              { inTime: "", outTime: "" },
+              { inTime: "", outTime: "" },
+              { inTime: "", outTime: "" },
+            ].map((time, idx) => (
+              <Arrival inOut={time.inTime} outIn={time.outTime} />
+            ))}
+          </div>
         </section>
       </section>
     </section>
