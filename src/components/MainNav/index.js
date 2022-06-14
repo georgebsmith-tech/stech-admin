@@ -78,7 +78,7 @@ export const MainNav = () => {
             {
               page: "Notifications",
               img: "manage-users-active.svg",
-              link: "/stocks-inventory",
+              link: "/notifications",
             },
             {
               page: "Settings",

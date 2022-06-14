@@ -8,3 +8,4 @@ export * from "./CustomerProfile";
 export * from "./ManageUsers";
 
 export * from "./AttendanceHistory";
+export * from "./Notifications";

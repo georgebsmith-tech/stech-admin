@@ -1,4 +1,4 @@
-import React, { useState } from "react";
+import React, { useEffect, useRef, useState } from "react";
 import { Button, NewMessageModal, SearchInput } from "../";
 
 export const MessagingContent = () => {
@@ -87,8 +87,17 @@ const SelectMessageView = ({ openModal }) => {
 };
 
 const SendGroupMessageView = ({}) => {
-  const [messages, setMessages] = useState([1, 2]);
+  const [messages, setMessages] = useState([1, 2, 4, 5, 6, 4]);
   const [newMessage, setNewMessage] = useState("");
+  const messageEndRef = useRef();
+
+  const scrollToBottom = () => {
+    messageEndRef?.current.scrollIntoView({ behavior: "smooth" });
+  };
+
+  useEffect(() => {
+    scrollToBottom();
+  }, [messages]);
   return (
     <section style={{ flex: 0.7, height: "90vh" }} className="bg-white">
       <header
@@ -109,6 +118,7 @@ const SendGroupMessageView = ({}) => {
               idx % 2 ? <SentMessage /> : <ReceivedMessage />
             )}
           </ul>
+          <div ref={messageEndRef} />
         </main>
         <div
           style={{

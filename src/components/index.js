@@ -21,3 +21,5 @@ export * from "./ManageUserDropDown";
 export * from "./modals/NewMessageModal";
 export * from "./MessagingContent";
 export * from "./FormElements/SearchInput";
+export * from "./NotificationsContent";
+export * from "./NotificationsWrapper";
