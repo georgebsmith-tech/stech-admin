@@ -1,6 +1,6 @@
 import React from "react";
 import { Link } from "react-router-dom";
-import { NotificationsWrapper, SearchInput, Button } from "..";
+import { NotificationsWrapper, SearchInput, Button, TableNav } from "../..";
 export const NotificationsContent = () => (
   <section
     style={{
@@ -8,7 +8,7 @@ export const NotificationsContent = () => (
       marginTop: 30,
 
       width: "100%",
-      height: 850,
+      height: 1000,
     }}
   >
     <div style={{ padding: "0 32px" }}>
@@ -36,11 +36,13 @@ export const NotificationsContent = () => (
         width: "100%",
         flexDirection: "column",
         alignItems: "center",
+        // backgroundColor: "red",
       }}
       extra={{ width: "40%" }}
       messageContStyles={{ height: 600 }}
       show={false}
       notifications={[1, 2, 3, 4, 5, 6]}
     />
+    <TableNav classes="justify-center" />
   </section>
 );

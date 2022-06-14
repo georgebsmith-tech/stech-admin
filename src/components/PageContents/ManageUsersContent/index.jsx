@@ -1,8 +1,7 @@
 import React, { useState } from "react";
-import { Link } from "react-router-dom";
 
-import { ManageUserDropDown } from "..";
-import { ConfigureUserTableModal } from "../modals/ConfigureUserTableModal";
+import { ManageUserDropDown } from "../../";
+import { ConfigureUserTableModal } from "../../";
 
 export const ManageUsersContent = () => {
   const [editIsOpen, setEditIsOpen] = useState(false);

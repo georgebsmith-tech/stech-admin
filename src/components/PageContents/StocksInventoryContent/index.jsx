@@ -1,5 +1,5 @@
 import React from "react";
-import { Input, Select } from "../";
+import { Input, Select } from "../..";
 
 export const StocksInventoryContent = () => (
   <section>

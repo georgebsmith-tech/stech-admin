@@ -1,6 +1,6 @@
 import React from "react";
-import { Input, Select, Button, ProfileDetail } from "..";
-import { GoBack } from "../Helpers/GoBack";
+import { Input, Select, Button, ProfileDetail } from "../..";
+import { GoBack } from "../../Helpers/GoBack";
 
 export const CustomerProfileContent = () => (
   <section>

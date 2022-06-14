@@ -10,16 +10,12 @@ import {
   CustomerProfile,
   ManageUsers,
   Messaging,
-
   ProductList,
   NewService,
-
   Notifications,
-
 } from "./pages";
 import { BrowserRouter, Route, Routes } from "react-router-dom";
-import dash from "./pages/Dashboard";
-import { Register } from "./components/AttendanceContent";
+
 import { NewServiceBox } from "./pages/NewServiceBox";
 
 function App() {

@@ -1,5 +1,5 @@
 import React, { useEffect, useRef, useState } from "react";
-import { Button, NewMessageModal, SearchInput } from "../";
+import { Button, NewMessageModal, SearchInput } from "../..";
 
 export const MessagingContent = () => {
   const [newMessageModalIsOpen, setNewMessageModalIsopen] = useState(false);

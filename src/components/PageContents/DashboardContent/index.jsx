@@ -1,7 +1,7 @@
 import React, { useState } from "react";
-import { ProductSalesRecord, OutOfStock } from "..";
+import { ProductSalesRecord, OutOfStock } from "../..";
 import { Switch } from "@mui/material";
-import SplineChart from "../Charts/Spline Chart";
+import SplineChart from "../../Charts/Spline Chart";
 
 export const DashboardContent = () => {
   const [isDeskMode, setIsDeskMode] = useState(false);

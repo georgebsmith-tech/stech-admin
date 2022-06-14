@@ -1,6 +1,6 @@
 import React from "react";
-import { Arrival } from "../Arrival";
-import { TablerowContent } from "../TablerowContent";
+import { Arrival } from "../../Arrival";
+import { TablerowContent } from "../..";
 
 export const AttendanceHistoryContent = () => {
   return (

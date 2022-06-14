@@ -1,8 +1,8 @@
 import React, { useState } from "react";
 import { Link } from "react-router-dom";
-import { Sequence } from "../FormElements/Sequence";
-import { EditTime } from "../EditTime";
-import { EditTimeModal } from "../modals";
+import { Sequence } from "../../FormElements/Sequence";
+import { EditTime, TableNav } from "../..";
+import { EditTimeModal } from "../..";
 
 export const AttendanceContent = () => {
   const [editIsOpen, setEditIsOpen] = useState(false);
@@ -12,24 +12,12 @@ export const AttendanceContent = () => {
     setEditIsOpen(!editIsOpen);
   };
 
-  const [count, setCount] = useState(1);
-
   // const handleCount = () => {
   //   setCount(count + 1);
   // };
   // const handleCountDecrease = () => {
   //   if (count > 1) setCount(count - 1);
   // };
-  const handleCount = (by) => {
-    // if (count === 1 && by === -1) {
-    //   setCount(count);
-    // } else {
-    //   setCount(count + by);
-    // }
-    if (!(count === 1 && by === -1)) {
-      setCount(count + by);
-    }
-  };
 
   return (
     <>
@@ -71,13 +59,7 @@ export const AttendanceContent = () => {
           </tbody>
         </table>
 
-        <section className="next">
-          <div className="backfront">
-            <img src="./images/back.svg" onClick={() => handleCount(-1)}></img>
-            <p>{count}</p>
-            <img src="./images/front.svg" onClick={() => handleCount(1)}></img>
-          </div>
-        </section>
+        <TableNav />
       </section>
       {/* modal */}
       <EditTimeModal
