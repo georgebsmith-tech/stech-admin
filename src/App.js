@@ -10,8 +10,12 @@ import {
   CustomerProfile,
   ManageUsers,
   Messaging,
+
   ProductList,
   NewService,
+
+  Notifications,
+
 } from "./pages";
 import { BrowserRouter, Route, Routes } from "react-router-dom";
 import dash from "./pages/Dashboard";
@@ -36,6 +40,7 @@ function App() {
         <Route path="customer-profile" element={<CustomerProfile />} />
         <Route path="manage-users" element={<ManageUsers />} />
         <Route path="messaging" element={<Messaging />} />
+        <Route path="notifications" element={<Notifications />} />
       </Routes>
     </BrowserRouter>
   );

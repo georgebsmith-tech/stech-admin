@@ -1,6 +1,6 @@
 import React from "react";
 import { Link } from "react-router-dom";
-import { Input, Select, MainNav } from "../../";
+import { MainNav, NotificationsWrapper } from "../../";
 
 export const MainLayout = ({ children }) => {
   return (
@@ -16,6 +16,7 @@ export const MainLayout = ({ children }) => {
         }}
       >
         {children}
+        {/* <NotificationsWrapper /> */}
       </main>
     </div>
   );

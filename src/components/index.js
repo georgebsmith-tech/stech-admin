@@ -30,3 +30,6 @@ export * from "./Productflex";
 export * from "./ProductTableDuplicate";
 export * from "./ProductTableContentDuplicate";
 export * from "./ProductRowDuplicate";
+export * from "./NotificationsContent";
+export * from "./NotificationsWrapper";
+

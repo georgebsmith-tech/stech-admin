@@ -1,4 +1,4 @@
-export const SearchInput = () => (
+export const SearchInput = ({ ...rest }) => (
   <form className="relative">
     <input
       placeholder="Search for messages"
@@ -9,6 +9,7 @@ export const SearchInput = () => (
         border: "1px solid rgba(218, 223, 221, 1)",
       }}
       className="f14 br-8"
+      {...rest}
     />
     <div
       style={{
