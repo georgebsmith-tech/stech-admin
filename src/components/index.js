@@ -21,5 +21,15 @@ export * from "./ManageUserDropDown";
 export * from "./modals/NewMessageModal";
 export * from "./MessagingContent";
 export * from "./FormElements/SearchInput";
+export * from "./ProductTable";
+export * from "./ProductTableContent";
+export * from "./ProductRow";
+export * from "./NewProduct";
+export * from "./NewProductBox";
+export * from "./Productflex";
+export * from "./ProductTableDuplicate";
+export * from "./ProductTableContentDuplicate";
+export * from "./ProductRowDuplicate";
 export * from "./NotificationsContent";
 export * from "./NotificationsWrapper";
+
