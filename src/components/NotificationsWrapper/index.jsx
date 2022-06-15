@@ -110,10 +110,10 @@ export const NotificationsWrapper = ({
           style={{
             padding: 26,
             borderTop: "1px solid rgba(219, 226, 223, 1)",
-            display: show ? "block" : "none",
+            display: show ? "flex" : "none",
           }}
         >
-          <Link to="/" className="'fg-grey1 f14">
+          <Link to="/notifications" className="'fg-grey1 f14">
             See all Activities
           </Link>
         </div>

@@ -13,6 +13,7 @@ import {
   ProductList,
   NewService,
   Notifications,
+  Settings,
 } from "./pages";
 import { BrowserRouter, Route, Routes } from "react-router-dom";
 
@@ -37,6 +38,7 @@ function App() {
         <Route path="manage-users" element={<ManageUsers />} />
         <Route path="messaging" element={<Messaging />} />
         <Route path="notifications" element={<Notifications />} />
+        <Route path="settings" element={<Settings />} />
       </Routes>
     </BrowserRouter>
   );
