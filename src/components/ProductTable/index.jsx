@@ -21,7 +21,7 @@ export const ProductTable = () => {
         </thead>
         <tbody>
           {[2, 3, 3, 56, 54, 56, 6].map((item, idx) => (
-            <ProductRow sn={idx * 1 + 1} />
+            <ProductRow sn={idx * 1 + 1} key={idx} />
           ))}
         </tbody>
       </table>

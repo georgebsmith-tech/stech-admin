@@ -14,6 +14,7 @@ export const NotificationsWrapper = ({
   show = true,
   messageContStyles = { height: 450, overflowY: "auto" },
   notifications = [1, 4, 5, 7, 7, 5, 7, 8],
+  setNotificationIsOpen,
 }) => (
   <section style={containerStyle} className="br-8">
     <div style={{ ...extra }}>
@@ -30,7 +31,11 @@ export const NotificationsWrapper = ({
         >
           <h2 className="fg-grey1 fw500 f16">Notifications</h2>
           <div>
-            <img src="/images/close.svg" />
+            <img
+              src="/images/close.svg"
+              className="hover pointer"
+              onClick={() => setNotificationIsOpen(false)}
+            />
           </div>
         </header>
       </div>

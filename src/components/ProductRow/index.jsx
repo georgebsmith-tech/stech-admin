@@ -1,11 +1,11 @@
 import React from "react";
 import { ProductTableContent } from "../ProductTableContent";
 
-export const ProductRow = () => {
+export const ProductRow = ({ sn }) => {
   return (
     <tr>
       <ProductTableContent
-        sn={"1"}
+        sn={sn}
         product={"Chocolate"}
         category={"Beverage"}
         manufacturer={"Bournvita"}
