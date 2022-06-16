@@ -17,6 +17,7 @@ import {
 import { BrowserRouter, Route, Routes } from "react-router-dom";
 
 import { NewServiceBox } from "./pages/NewServiceBox";
+import { SalesRegister } from "./components";
 
 function App() {
   return (
@@ -29,6 +30,7 @@ function App() {
         <Route path="attendance" element={<Attendance />} />
         <Route path="product-list" element={<ProductList />} />
         <Route path="new-service" element={<NewService />} />
+        <Route path="sales-register" element={<SalesRegister />} />
         <Route path="new-service-box" element={<NewServiceBox />} />
 
         <Route path="attendance-history" element={<AttendanceHistory />} />
