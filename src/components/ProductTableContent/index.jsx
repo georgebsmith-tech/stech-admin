@@ -11,21 +11,22 @@ export const ProductTableContent = ({
   unit,
   quantity,
   action,
+  isExpanded,
 }) => {
   return (
     <>
       <td>{sn}</td>
       <td>{product}</td>
-      <td>{category}</td>
-      <td>{manufacturer}</td>
+      <td className={!isExpanded && "hide"}>{category}</td>
+      <td className={!isExpanded && "hide"}>{manufacturer}</td>
       <td>{cprice}</td>
       <td>{sprice}</td>
       <td>{available}</td>
-      <td>{unit}</td>
+      <td className={!isExpanded && "hide"}>{unit}</td>
       <td>
         <div className="quantify">{quantity}</div>
       </td>
-      <td>
+      <td className={!isExpanded && "hide"}>
         <button className="CTA">{action}</button>
       </td>
     </>

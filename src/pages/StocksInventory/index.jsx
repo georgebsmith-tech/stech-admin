@@ -6,12 +6,13 @@ import {
   MainNav,
   Select,
   StocksInventoryContent,
+  ProductListContent,
 } from "../../components";
 
 export const StocksInventory = () => {
   return (
     <MainLayout>
-      <StocksInventoryContent />
+      <ProductListContent />
     </MainLayout>
   );
 };

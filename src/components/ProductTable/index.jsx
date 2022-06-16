@@ -1,7 +1,7 @@
 import { React, useState } from "react";
 import { ProductRow } from "../ProductRow";
 
-export const ProductTable = () => {
+export const ProductTable = ({ isExpanded }) => {
   const [count, setCount] = useState(1);
   // setCount = count + 1;
   return (
@@ -10,18 +10,21 @@ export const ProductTable = () => {
         <thead>
           <th>S/N</th>
           <th>Product</th>
-          <th>Category</th>
-          <th>Manufacturer</th>
+          <th className={!isExpanded && "hide"}>Category</th>
+          <th className={!isExpanded && "hide"}>Manufacturer</th>
           <th>C. Price</th>
           <th>S. Price</th>
           <th>Avail. Qty</th>
-          <th>Unit of sale</th>
+          <th className={!isExpanded && "hide"}>Unit of sale</th>
           <th>Qty rem.</th>
-          <th>Action</th>
+          <th className={!isExpanded && "hide"}>Action</th>
         </thead>
         <tbody>
           {[2, 3, 3, 56, 54, 56, 6].map((item, idx) => (
-            <ProductRow sn={idx * 1 + 1} key={idx} />
+
+            <ProductRow sn={idx * 1 + 1} isExpanded={isExpanded} />
+
+
           ))}
         </tbody>
       </table>

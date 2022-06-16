@@ -1239,12 +1239,20 @@ input[type="date"]::-webkit-calendar-picker-indicator {
   column-gap: 40px;
 }
 
-.sales > a:hover {
+.hovergreen {
   border-bottom: 2px solid #40916c;
+  font-family: "Circular Std";
+  font-style: normal;
+  font-weight: 500;
+  font-size: 16px;
+  line-height: 20px;
+  padding-bottom: 20px;
+
+  color: #40916c;
 }
 
-.sales > a {
-  text-decoration: none;
+.sales {
+  /* text-decoration: none; */
   font-family: "Circular Std";
   font-style: normal;
   font-weight: 500;
@@ -1301,6 +1309,26 @@ input[type="date"]::-webkit-calendar-picker-indicator {
   /* border-bottom: 1px solid #dadfdd; */
 }
 
+.labelfilter {
+  display: flex;
+  column-gap: 12px;
+}
+
+.to-fro {
+  display: flex;
+  column-gap: 16px;
+}
+.to-fro > input {
+  border: 1px solid #dadfdd;
+  border-radius: 8px;
+  /* padding: 15px 16px; */
+}
+
+.filterholder {
+  display: flex;
+  column-gap: 16px;
+}
+
 .searchflex > h3 {
   font-family: "Circular Std";
   font-style: normal;
@@ -1312,7 +1340,7 @@ input[type="date"]::-webkit-calendar-picker-indicator {
 }
 
 .searchinput {
-  width: 438px;
+  /* width: 438px; */
   background: #ffffff;
 
   border: 1px solid #dadfdd;
@@ -1339,7 +1367,7 @@ input[type="date"]::-webkit-calendar-picker-indicator {
 .holdericon {
   margin-left: 17.5px;
   margin-top: 15px;
-  margin-bottom: 15px;
+  /* margin-bottom: 15px; */
 }
 
 .sort {
@@ -1408,7 +1436,7 @@ input[type="date"]::-webkit-calendar-picker-indicator {
 }
 
 .sellproduct {
-  /* margin: 0px 32px; */
+  margin: 0px 32px;
 
   margin-bottom: 24px;
 }
@@ -1419,24 +1447,20 @@ input[type="date"]::-webkit-calendar-picker-indicator {
   column-gap: 4px;
 }
 
-.greenproducts button:first-child {
+.greenbg {
   background-color: #40916c;
   border-radius: 2px;
+  border: 1px solid #40916c;
+  color: #ffff;
   font-family: "Circular Std";
   font-style: normal;
   font-weight: 450;
   font-size: 14px;
   line-height: 18px;
-
-  color: #ffffff;
   padding: 4px 16px;
-  border: 1px solid #40916c;
 }
 
-.greenproducts button:last-child {
-  padding: 4px 16px;
-  background-color: #fff;
-  border: none;
+/* .greenproducts button {
   font-family: "Circular Std";
   font-style: normal;
   font-weight: 450;
@@ -1444,6 +1468,18 @@ input[type="date"]::-webkit-calendar-picker-indicator {
   line-height: 18px;
 
   color: #19201d;
+  padding: 4px 16px;
+} */
+
+.whiteInvBtn {
+  padding: 4px 16px;
+  background-color: white;
+  border: none;
+  font-family: "Circular Std";
+  font-style: normal;
+  font-weight: 450;
+  font-size: 14px;
+  line-height: 18px;
 }
 .namedproduct {
   margin-top: 32px;
@@ -1565,6 +1601,15 @@ input[type="date"]::-webkit-calendar-picker-indicator {
   justify-content: center;
 }
 
+
+.headsales {
+  text-align: left;
+  width: 100%;
+}
+.vertical {
+  background-color: #ffff;
+
 .fw400 {
   font-weight: 400;
+
 }

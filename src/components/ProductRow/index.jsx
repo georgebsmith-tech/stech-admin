@@ -1,7 +1,9 @@
 import React from "react";
 import { ProductTableContent } from "../ProductTableContent";
 
-export const ProductRow = ({ sn }) => {
+
+export const ProductRow = ({ isExpanded,sn }) => {
+
   return (
     <tr>
       <ProductTableContent
@@ -15,6 +17,7 @@ export const ProductRow = ({ sn }) => {
         unit={"Sachet"}
         quantity={"900"}
         action={"view"}
+        isExpanded={isExpanded}
       />
     </tr>
   );

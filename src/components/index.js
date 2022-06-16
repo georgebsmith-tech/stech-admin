@@ -36,5 +36,12 @@ export * from "./TablerowContent";
 export * from "./modals/EditTimeModal";
 export * from "./EditTime";
 export * from "./Helpers/TableNav";
+
+export * from "./ProductListContent";
+export * from "./SalesRegister";
+export * from "./SalesFilter";
+export * from "./SalesRow";
+
 export * from "./PageContents/SettingsContent";
 export * from "./PageContents/WalletContent";
+

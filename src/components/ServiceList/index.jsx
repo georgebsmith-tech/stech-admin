@@ -1,6 +1,8 @@
-import React from "react";
+import React, { useState } from "react";
+import { ServiceListCheckbox } from "../ServiceListCheckbox";
 
 export const ServiceList = () => {
+  const [activeButton, setActiveButton] = useState("product");
   return (
     <section className="productholder">
       <div className="sellproduct">
@@ -8,8 +10,18 @@ export const ServiceList = () => {
           <h3>Add New Product/Service</h3>
         </div>
         <div className="greenproducts">
-          <button>Products</button>
-          <button>Service</button>
+          <button
+            onClick={() => setActiveButton("product")}
+            className={activeButton === "product" ? "greenbg" : "whiteInvBtn"}
+          >
+            Products
+          </button>
+          <button
+            onClick={() => setActiveButton("service")}
+            className={activeButton === "service" ? "greenbg" : "whiteInvBtn"}
+          >
+            Service
+          </button>
         </div>
 
         <div className="namedproduct">
@@ -48,10 +60,14 @@ export const ServiceList = () => {
               <input type="text" placeholder="0.00" />
             </div>
 
-            <div className="productinputText">
-              <label>Quantity per unit</label>
-              <input type="text" placeholder="0.00" />
-            </div>
+            {activeButton === "service" ? (
+              <ServiceListCheckbox />
+            ) : (
+              <div className="productinputText">
+                <label>Quantity per unit</label>
+                <input type="text" placeholder="0.00" />
+              </div>
+            )}
           </div>
 
           <div className="productinputType">
