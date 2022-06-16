@@ -204,7 +204,13 @@ const ReceivedMessage = () => (
     <div style={{ maxWidth: "70%" }}>
       <p
         className="flex align-center"
-        style={{ marginBottom: 12, columnGap: 12, marginTop: 6 }}
+        style={{
+          marginBottom: 12,
+          columnGap: 12,
+          marginTop: 6,
+          flexDirection: "row-reverse",
+          justifyContent: "flex-end",
+        }}
       >
         <span className="fg-dark3 f10">30 mmins ago</span>
         <span className="fg-dark1 f12 fw500">Emmanuel Jacob</span>

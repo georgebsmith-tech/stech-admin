@@ -7,7 +7,7 @@
   padding: 0;
   margin: 0;
   box-sizing: border-box;
-  font-family: "Circular Std";
+  font-family: "Poppins";
 }
 
 body {
@@ -1601,15 +1601,14 @@ input[type="date"]::-webkit-calendar-picker-indicator {
   justify-content: center;
 }
 
-
 .headsales {
   text-align: left;
   width: 100%;
 }
 .vertical {
   background-color: #ffff;
+}
 
 .fw400 {
   font-weight: 400;
-
 }

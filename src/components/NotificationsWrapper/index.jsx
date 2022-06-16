@@ -39,7 +39,7 @@ export const NotificationsWrapper = ({
           </div>
         </header>
       </div>
-      <div style={{ padding: "32px" }}>
+      <div style={{ padding: "0 32px 32px 32px" }}>
         <SearchInput placeholder="Search for items by name, category, manufacturer, " />
       </div>
       <div className="flex-col justify-between" style={{ height: "70%" }}>
