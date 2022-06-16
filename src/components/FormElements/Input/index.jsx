@@ -1,7 +1,9 @@
 import React from "react";
 
-export const Input = ({ title = "Product name", ...rest }) => (
-  <fieldset style={{ marginBottom: 32, flex: 1, border: "none" }}>
+export const Input = ({ title = "Product name", containerStyle, ...rest }) => (
+  <fieldset
+    style={{ marginBottom: 32, flex: 1, border: "none", ...containerStyle }}
+  >
     <label style={{ marginBottom: 8 }} className="block f14">
       {title}
     </label>

@@ -13,6 +13,12 @@ export const NavSection = ({ title, routes = [] }) => (
       {routes.map((menu, idx) => (
         <li key={idx}>
           <Link
+            onClick={(e) => {
+              if (menu.action) {
+                e.preventDefault();
+                menu.action();
+              }
+            }}
             to={menu.link}
             style={{
               padding: "10px 32px",

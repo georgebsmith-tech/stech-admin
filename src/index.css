@@ -95,6 +95,10 @@ td {
 .f20 {
   font-size: 20px;
 }
+
+.f24 {
+  font-size: 24px;
+}
 .fw700 {
   font-weight: 700;
 }
@@ -155,8 +159,15 @@ button {
   font-size: 12px;
 }
 
+.f48 {
+  font-size: 48px;
+}
+
 .fg-grey5 {
   color: rgba(111, 121, 117, 1);
+}
+.fg-grey2 {
+  color: rgba(68, 74, 71, 1);
 }
 
 .font-std {
@@ -1590,10 +1601,15 @@ input[type="date"]::-webkit-calendar-picker-indicator {
   justify-content: center;
 }
 
+
 .headsales {
   text-align: left;
   width: 100%;
 }
 .vertical {
   background-color: #ffff;
+
+.fw400 {
+  font-weight: 400;
+
 }

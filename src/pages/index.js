@@ -9,7 +9,11 @@ export * from "./ManageUsers";
 
 export * from "./AttendanceHistory";
 
+
+
+export * from "./Settings";
+
 export * from "./ProductList";
 export * from "./NewService";
-
+export * from "./Wallet";
 export * from "./Notifications";

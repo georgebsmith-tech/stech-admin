@@ -1,11 +1,15 @@
-import React from "react";
+import React, { useState } from "react";
 import { Link } from "react-router-dom";
 import { MainNav, NotificationsWrapper } from "../../";
 
 export const MainLayout = ({ children }) => {
+  const [notificationIsOpen, setNotificationIsOpen] = useState(false);
   return (
     <div className="flex">
-      <MainNav />
+      <MainNav
+        notificationIsOpen={notificationIsOpen}
+        setNotificationIsOpen={setNotificationIsOpen}
+      />
 
       <main
         style={{
@@ -16,7 +20,9 @@ export const MainLayout = ({ children }) => {
         }}
       >
         {children}
-        {/* <NotificationsWrapper /> */}
+        {notificationIsOpen && (
+          <NotificationsWrapper setNotificationIsOpen={setNotificationIsOpen} />
+        )}
       </main>
     </div>
   );

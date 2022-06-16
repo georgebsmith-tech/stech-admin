@@ -1,7 +1,7 @@
 import React from "react";
 import { NavSection, RegisterUserModal } from "..";
 
-export const MainNav = () => {
+export const MainNav = ({ setNotificationIsOpen }) => {
   const [userModalIsOpen, setUserModalIsOpen] = React.useState(false);
   return (
     <>
@@ -79,11 +79,12 @@ export const MainNav = () => {
               page: "Notifications",
               img: "manage-users-active.svg",
               link: "/notifications",
+              action: () => setNotificationIsOpen(true),
             },
             {
               page: "Settings",
               img: "manage-users-active.svg",
-              link: "/stocks-inventory",
+              link: "/settings",
             },
           ]}
         />

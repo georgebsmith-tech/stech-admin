@@ -15,11 +15,18 @@ export default function Details({}) {
   };
   const notify = (message) => toast(message);
 
-  function login() {
+  async function login() {
     if (!email || !password) {
       notify("Email and Password are required!");
       return;
     }
+    // const resp = await fetch("https://backend-api.mcsgroupsrl.com/api/login", {
+    //   method: "POST",
+    //   body: JSON.stringify({ email, password }),
+    //   headers: { "Content-type": "application/json" },
+    // });
+    // const data = await resp.json();
+    // console.log(data);
 
     navigate("/dashboard");
 
