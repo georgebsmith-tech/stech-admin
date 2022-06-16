@@ -37,3 +37,4 @@ export * from "./modals/EditTimeModal";
 export * from "./EditTime";
 export * from "./Helpers/TableNav";
 export * from "./PageContents/SettingsContent";
+export * from "./PageContents/WalletContent";
