@@ -19,7 +19,8 @@ import {
 import { BrowserRouter, Route, Routes } from "react-router-dom";
 
 import { NewServiceBox } from "./pages/NewServiceBox";
-import { SalesRegister } from "./components";
+import { CustomerReport, SalesRegister } from "./components";
+import { SalesModal } from "./components/modals";
 
 function App() {
   return (
@@ -34,9 +35,10 @@ function App() {
         <Route path="new-service" element={<NewService />} />
         <Route path="sales-register" element={<SalesRegister />} />
         <Route path="new-service-box" element={<NewServiceBox />} />
+        <Route path="sales-modal" element={<SalesModal />} />
 
         <Route path="attendance-history" element={<AttendanceHistory />} />
-
+        <Route path="customer-report" element={<CustomerReport />} />
         <Route path="customer-profile" element={<CustomerProfile />} />
         <Route path="manage-users" element={<ManageUsers />} />
         <Route path="messaging" element={<Messaging />} />

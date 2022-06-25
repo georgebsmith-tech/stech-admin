@@ -1,4 +1,6 @@
-import React from "react";
+import { Link } from "react-router-dom";
+import React, { useState } from "react";
+import { SalesMore } from "../SalesMore";
 
 export const SalesData = ({
   sn,
@@ -12,9 +14,11 @@ export const SalesData = ({
   amount,
   action,
 }) => {
+  const [salesMoreIsOpen, setSalesMoreIsOpen] = useState(false);
+  const [isSuspended, setIsSuspended] = useState(false);
   return (
     <>
-      <td>{sn}</td>
+      <td style={{ width: 20 }}>{sn}</td>
       <td>{date}</td>
       <td>{name}</td>
       <td>{department}</td>
@@ -23,8 +27,18 @@ export const SalesData = ({
       <td>{unit}</td>
       <td>{uprice}</td>
       <td>{amount}</td>
-      <td>
-        <button>{action}</button>
+      <td style={{ position: "relative" }}>
+        <SalesMore
+          isOpen={salesMoreIsOpen}
+          isSuspended={isSuspended}
+          setIsSuspended={setIsSuspended}
+        />
+        <button
+          className="CTA"
+          onClick={() => setSalesMoreIsOpen(!salesMoreIsOpen)}
+        >
+          {action}
+        </button>
       </td>
     </>
   );
