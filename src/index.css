@@ -163,6 +163,10 @@ button {
   font-size: 48px;
 }
 
+.animate-p6 {
+  transition-duration: 0.6s;
+}
+
 .fg-grey5 {
   color: rgba(111, 121, 117, 1);
 }

@@ -1,8 +1,12 @@
-import React from "react";
+import React, { useContext, useState } from "react";
 import { NavSection, RegisterUserModal } from "..";
+import { Context } from "../../contexts";
 
 export const MainNav = ({ setNotificationIsOpen }) => {
   const [userModalIsOpen, setUserModalIsOpen] = React.useState(false);
+  const { navIsCollapsed, setNavIsCollaped } = useContext(Context);
+  console.log(navIsCollapsed);
+  const handleCollapseNav = () => {};
   return (
     <>
       {/* {userModalIsOpen && <RegisterUserModal closeModal={setUserModalIsOpen} />} */}
@@ -11,27 +15,45 @@ export const MainNav = ({ setNotificationIsOpen }) => {
         isOpen={userModalIsOpen}
       />
       <nav
-        className="bg-primary1"
-        style={{ width: 320, height: "100vh", overflow: "auto" }}
+        className="bg-primary1 animate-p6"
+        style={{
+          width: navIsCollapsed ? "fit-content" : 320,
+          height: "100vh",
+          overflow: "auto",
+        }}
       >
         <div style={{ padding: "48px 32px", width: "fit-content" }}>
           <div
             style={{ marginBottom: 48 }}
             className="justify-between flex align-center"
           >
-            <img src="/images/logo-white.svg" />
-            <img src="/images/harm-burger.svg" className="hover pointer" />
+            {navIsCollapsed ? (
+              <img src="/images/logo-only.svg" />
+            ) : (
+              <img src="/images/logo-white.svg" />
+            )}
+
+            <img
+              src="/images/harm-burger.svg"
+              className="hover pointer"
+              onClick={() => setNavIsCollaped(!navIsCollapsed)}
+            />
           </div>
           <div className="flex" style={{ marginBottom: 48 }}>
             <button
-              style={{ padding: "21px 24px", border: "1px solid #fff" }}
+              style={{
+                padding: `21px ${navIsCollapsed ? 30 : 24}px`,
+                border: "1px solid #fff",
+              }}
               className="br-4 transparent center hover"
               onClick={() => setUserModalIsOpen(true)}
             >
               <img src="/images/add.svg" />
-              <span className="fg-white" style={{ marginLeft: 16 }}>
-                Register member
-              </span>
+              {!navIsCollapsed && (
+                <span className="fg-white" style={{ marginLeft: 16 }}>
+                  Register member
+                </span>
+              )}
             </button>
           </div>
           <div style={{ border: "1px solid rgba(68, 74, 71, 1)" }} />
