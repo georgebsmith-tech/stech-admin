@@ -35,7 +35,12 @@ export const NavSection = ({ title, routes = [] }) => {
             >
               <img src={`/images/${menu.img}`} style={{ marginRight: 15.67 }} />
               {!navIsCollapsed && (
-                <p className="fg-dark7 font-std">{menu.page}</p>
+                <p
+                  className="fg-dark7 font-std"
+                  style={{ whiteSpace: "nowrap" }}
+                >
+                  {menu.page}
+                </p>
               )}
             </Link>
           </li>
