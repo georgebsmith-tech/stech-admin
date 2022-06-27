@@ -17,7 +17,7 @@ export const MainNav = ({ setNotificationIsOpen }) => {
       <nav
         className="bg-primary1 animate-p6"
         style={{
-          width: navIsCollapsed ? "fit-content" : 320,
+          width: "fit-content",
           height: "100vh",
           overflow: "auto",
         }}
@@ -50,7 +50,10 @@ export const MainNav = ({ setNotificationIsOpen }) => {
             >
               <img src="/images/add.svg" />
               {!navIsCollapsed && (
-                <span className="fg-white" style={{ marginLeft: 16 }}>
+                <span
+                  className="fg-white"
+                  style={{ marginLeft: 16, whiteSpace: "nowrap" }}
+                >
                   Register member
                 </span>
               )}
