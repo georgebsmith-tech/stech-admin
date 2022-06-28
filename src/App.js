@@ -15,6 +15,7 @@ import {
   Notifications,
   Settings,
   Wallet,
+  DeskMode,
 } from "./pages";
 import { BrowserRouter, Route, Routes } from "react-router-dom";
 
@@ -36,6 +37,7 @@ function App() {
         <Route path="sales-register" element={<SalesRegister />} />
         <Route path="new-service-box" element={<NewServiceBox />} />
         <Route path="sales-modal" element={<SalesModal />} />
+        <Route path="desk-mode" element={<DeskMode />} />
 
         <Route path="attendance-history" element={<AttendanceHistory />} />
         <Route path="customer-report" element={<CustomerReport />} />

@@ -47,6 +47,9 @@ export * from "./CustomerReport";
 export * from "./ReportPage";
 export * from "./ReportData";
 export * from "./ReportRow";
+export * from "./DeskModeContent";
+export * from "./DeskData";
+export * from "./DeskRow";
 export * from "./ConfigureTableReport";
 
 export * from "./PageContents/SettingsContent";

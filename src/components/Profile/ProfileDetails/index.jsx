@@ -1,3 +1,4 @@
+import { Grid } from "@mui/material";
 import React from "react";
 
 export const ProfileDetail = () => (
@@ -9,7 +10,7 @@ export const ProfileDetail = () => (
       paddingBottom: 40,
     }}
   >
-    <h2 className="f16 fg-dark1 font-std fw500">Profile Details</h2>
+    <h3 className="profileDetails">Profile Details</h3>
     <div
       style={{
         border: "1px solid rgba(213, 215, 228, 1)",
@@ -34,19 +35,32 @@ export const ProfileDetail = () => (
           Emmanuel Joseph
         </p>
         <p className="f12" style={{ backgroundColor: "#EDFFF7", padding: 3 }}>
-          emanueljoeseph@gmail.com
+          emmanueljoeseph@gmail.com
         </p>
       </div>
       <section style={{ marginLeft: 72 }} className="flex-col justify-between">
-        <ul className="flex flex-wrap" style={{ columnGap: "7vw", rowGap: 24 }}>
+        <ul
+          className="gridTemplateColumns"
+          // style={{
+          //   display: Grid,
+          //   gridTemplateColumns: "1fr 1fr",
+          //   columnGap: "7vw",
+          //   rowGap: 24,
+          // }}
+        >
           <Li prty="Gender" value="Male" />
           <Li prty="Position/Role" value="None" />
           <Li prty="Personal ID" value="0000000000" />
         </ul>
 
-        <ul className="flex flex-wrap" style={{ columnGap: "7vw", rowGap: 24 }}>
+        <ul
+          className="gridTemplateColumns thirdLi"
+          // className="flex flex-wrap thirdLi"
+          // style={{ columnGap: "7vw", rowGap: 24 }}
+        >
           <Li prty="Date of Birth" value="12, Jun 2000" />
           <Li prty="Date Joined" value="12, Jun 2021" />
+          <Li value="This user is suspended till 12, jun 2022" />
         </ul>
       </section>
     </div>
