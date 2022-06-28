@@ -17,7 +17,7 @@ export const MainNav = ({ setNotificationIsOpen }) => {
       <nav
         className="bg-primary1 animate-p6"
         style={{
-          width: "fit-content",
+          width: navIsCollapsed ? "fit-content" : 320,
           height: "100vh",
           overflow: "auto",
         }}

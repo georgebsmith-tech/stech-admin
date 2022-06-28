@@ -13,6 +13,7 @@ export default function Details({}) {
     email,
     password,
   };
+  console.log(body);
   const notify = (message) => toast(message);
 
   async function login() {
@@ -20,17 +21,22 @@ export default function Details({}) {
       notify("Email and Password are required!");
       return;
     }
-    // const resp = await fetch("https://backend-api.mcsgroupsrl.com/api/login", {
-    //   method: "POST",
-    //   body: JSON.stringify({ email, password }),
-    //   headers: { "Content-type": "application/json" },
-    // });
-    // const data = await resp.json();
-    // console.log(data);
+    const resp = await fetch(
+      "https://gotruhub-api.herokuapp.com/api/v1/auth/agents/login",
+      {
+        method: "POST",
+        body: JSON.stringify(body),
+        headers: { "Content-type": "application/json" },
+      }
+    );
+    const data = await resp.json();
+    if (data.error) {
+      notify(data.error.message);
+    }
 
-    navigate("/dashboard");
+    console.log(data.token);
 
-    console.log(body);
+    // navigate("/dashboard");
   }
 
   return (
