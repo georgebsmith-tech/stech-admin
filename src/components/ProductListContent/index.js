@@ -28,18 +28,14 @@ export const ProductListContent = () => {
               <div className="searchflexholds">
                 <div className="searchflex">
                   <h3>Product List</h3>
-                  <div className="searchinput">
-                    <div className="holdericon">
-                      <img src="./images/searchicon.svg" />
-                      <input
-                        type="search"
-                        placeholder={
-                          isExpanded
-                            ? "Search for items by name, category, manufacturer, "
-                            : "Search for items"
-                        }
-                      ></input>
-                    </div>
+                  <div className="searchItems">
+                    <img src="./images/searchicon.svg" />
+                    <input
+                      type="search"
+                      placeholder={
+                        "Search for items by name, category, manufacturer, "
+                      }
+                    ></input>
                   </div>
                   <div className={isExpanded ? "sort" : "hide"}>
                     <label>Sort by :</label>

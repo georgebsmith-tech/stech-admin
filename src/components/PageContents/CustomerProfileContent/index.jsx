@@ -25,7 +25,10 @@ export const CustomerProfileContent = () => (
           </h1>
           <div className="flex" style={{ columnGap: 15 }}>
             <Button title="Customer Records" />
-            <Button classes="bg-primary1 fg-white" title="Resend Password" />
+            <Button
+              classes="bg-primary1 fg-white resetPasswordButton"
+              title="Resend Password"
+            />
           </div>
         </div>
         <ProfileDetail />
@@ -37,7 +40,7 @@ export const CustomerProfileContent = () => (
             paddingBottom: 40,
           }}
         >
-          <h2 className="f16 fg-dark1 font-std fw500">Contact Information</h2>
+          <h2 className="f16 fg-dark1 font-std fw600">Contact Information</h2>
           <div
             style={{
               border: "1px solid rgba(213, 215, 228, 1)",
@@ -80,6 +83,6 @@ const Li = ({ prty, value, idx }) => (
     >
       {prty}
     </h4>
-    <p className="fg-dark1 fw500">{value}</p>
+    <p className="fg-dark1 fw500 contactAddress">{value}</p>
   </li>
 );
