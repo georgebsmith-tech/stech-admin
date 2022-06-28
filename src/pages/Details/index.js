@@ -32,11 +32,13 @@ export default function Details({}) {
     const data = await resp.json();
     if (data.error) {
       notify(data.error.message);
+      return;
     }
 
     console.log(data.token);
+    localStorage.setItem("token", data.token);
 
-    // navigate("/dashboard");
+    navigate("/dashboard");
   }
 
   return (

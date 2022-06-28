@@ -8,8 +8,7 @@ export * from "./CustomerProfile";
 export * from "./ManageUsers";
 
 export * from "./AttendanceHistory";
-
-
+export * from "./DeskMode";
 
 export * from "./Settings";
 

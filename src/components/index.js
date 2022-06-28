@@ -35,13 +35,22 @@ export * from "./NotificationsWrapper";
 export * from "./TablerowContent";
 export * from "./modals/EditTimeModal";
 export * from "./EditTime";
+export * from "./ConfigureTable";
 export * from "./Helpers/TableNav";
 
 export * from "./ProductListContent";
 export * from "./SalesRegister";
 export * from "./SalesFilter";
 export * from "./SalesRow";
+export * from "./GeneralProduct";
+export * from "./CustomerReport";
+export * from "./ReportPage";
+export * from "./ReportData";
+export * from "./ReportRow";
+export * from "./DeskModeContent";
+export * from "./DeskData";
+export * from "./DeskRow";
+export * from "./ConfigureTableReport";
 
 export * from "./PageContents/SettingsContent";
 export * from "./PageContents/WalletContent";
-
