@@ -54,3 +54,6 @@ export * from "./ConfigureTableReport";
 
 export * from "./PageContents/SettingsContent";
 export * from "./PageContents/WalletContent";
+export * from "./Table";
+export * from "./HardwareIntegration";
+export * from "./RulesAndPermission";

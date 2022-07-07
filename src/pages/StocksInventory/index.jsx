@@ -1,13 +1,6 @@
 import React from "react";
-import { Link } from "react-router-dom";
-import {
-  Input,
-  MainLayout,
-  MainNav,
-  Select,
-  StocksInventoryContent,
-  ProductListContent,
-} from "../../components";
+
+import { MainLayout, ProductListContent } from "../../components";
 
 export const StocksInventory = () => {
   return (

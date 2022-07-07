@@ -1,5 +1,6 @@
 import logo from "./logo.svg";
 import React from "react";
+
 // import { Signin } from "./pages/Signin";
 import {
   Dashbaord,
@@ -22,6 +23,7 @@ import { BrowserRouter, Route, Routes } from "react-router-dom";
 import { NewServiceBox } from "./pages/NewServiceBox";
 import { CustomerReport, SalesRegister } from "./components";
 import { SalesModal } from "./components/modals";
+import { socket } from "./config/socket.config";
 
 function App() {
   return (

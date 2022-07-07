@@ -1,17 +1,26 @@
 import React, { useState } from "react";
-import { Button, Input } from "../..";
+import { Button, Input, HardwareIntegration, RulesAndPermission } from "../..";
+import { useSearchParams } from "react-router-dom";
 
-export const SettingsContent = () => {
+export const SettingsContent = ({ location }) => {
+  const [searchParams, setSearchParams] = useSearchParams();
+  // setSearchParams({ hi: "yj" });
+
   const [activeTab, setActiveTab] = useState(0);
+  let content;
+  if (activeTab == 0) content = <PersonalDetails />;
+  else if (activeTab == 1) content = <CompanyDetails />;
+  else if (activeTab == 2) content = <HardwareIntegration />;
+  else if (activeTab == 3) content = <RulesAndPermission />;
   return (
     <section>
       <nav>
         <ul className="flex" style={{ columnGap: 40 }}>
           {[
             { tab: "Personal Details" },
-            { tab: "Personal Details" },
-            { tab: "Personal Details" },
-            { tab: "Personal Details" },
+            { tab: "Company Details" },
+            { tab: "Hardware Integration" },
+            { tab: "Roles & Permission" },
           ].map((tab, idx) => (
             <li
               onClick={() => setActiveTab(idx)}
@@ -34,13 +43,7 @@ export const SettingsContent = () => {
           ))}
         </ul>
       </nav>
-      {activeTab == 0 ? (
-        <PersonalDetails />
-      ) : activeTab == 1 ? (
-        <CompanyDetails />
-      ) : (
-        ""
-      )}
+      {content}
     </section>
   );
 };

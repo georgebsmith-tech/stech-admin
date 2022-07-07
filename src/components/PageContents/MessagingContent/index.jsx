@@ -1,5 +1,6 @@
 import React, { useEffect, useRef, useState } from "react";
 import { Button, NewMessageModal, SearchInput } from "../..";
+import { socket } from "../../../config/socket.config";
 
 export const MessagingContent = () => {
   const [newMessageModalIsOpen, setNewMessageModalIsopen] = useState(false);
@@ -94,6 +95,9 @@ const SendGroupMessageView = ({}) => {
   const scrollToBottom = () => {
     messageEndRef?.current.scrollIntoView({ behavior: "smooth" });
   };
+  const sendMessage = () => {
+    socket.emit("new_message", newMessage);
+  };
 
   useEffect(() => {
     scrollToBottom();
@@ -140,6 +144,7 @@ const SendGroupMessageView = ({}) => {
                 // flex: 1,
               }}
               rows={5}
+              placeholder="Type a message here"
             />
           </div>
           <div className="flex justify-between" style={{ marginTop: 28 }}>
@@ -147,9 +152,10 @@ const SendGroupMessageView = ({}) => {
             <img
               src="/images/send.svg"
               className="pointer hover"
-              onClick={() =>
-                setMessages([Math.round(Math.random() * 10), ...messages])
-              }
+              // onClick={() =>
+              //   setMessages([Math.round(Math.random() * 10), ...messages])
+              // }
+              onClick={sendMessage}
             />
           </div>
         </div>

@@ -1,7 +1,6 @@
 import React, { useState } from "react";
 
-import { ManageUserDropDown } from "../../";
-import { ConfigureUserTableModal } from "../../";
+import { ConfigureUserTableModal, Table, ManageUserDropDown } from "../../";
 
 export const ManageUsersContent = () => {
   const [editIsOpen, setEditIsOpen] = useState(false);
@@ -32,114 +31,7 @@ export const ManageUsersContent = () => {
         </div>
         <div className="bottom"></div>
 
-        <table className="tsec">
-          <thead className="headings">
-            {/* <div className="serial"> */}
-            <th>S/N</th>
-            <th>Name of user</th>
-            {/* </div> */}
-            {/* <div className="remark"> */}
-            <th>Date Joined </th>
-            <th>Class/Department</th>
-            <th>Level</th>
-            <th>Attendance</th>
-            <th>Total Spent</th>
-            <th>Action</th>
-
-            {/* </div> */}
-          </thead>
-          <tbody className="tbt">
-            {[1, 2, 3, 4, 4, 5, 3, 53, 4, 5].map((user, idx) => (
-              <tr key={idx}>
-                <td
-                  style={{
-                    paddingTop: 12,
-                    paddingBottom: 12,
-                    paddingLeft: 32,
-                  }}
-                  className="fg-grey1"
-                >
-                  {idx * 1 + 1}
-                </td>
-                <td
-                  style={{
-                    paddingTop: 12,
-
-                    paddingBottom: 12,
-                  }}
-                  className="fg-grey1"
-                >
-                  Emeka Julius Favour
-                </td>
-                <td
-                  style={{
-                    paddingTop: 12,
-
-                    paddingBottom: 12,
-                  }}
-                  className="fg-grey1"
-                >
-                  12, Jun 2011
-                </td>
-                <td
-                  style={{
-                    paddingTop: 12,
-
-                    paddingBottom: 12,
-                  }}
-                  className="fg-grey1"
-                >
-                  Deparment one
-                </td>
-                <td
-                  style={{
-                    paddingTop: 12,
-
-                    paddingBottom: 12,
-                  }}
-                  className="fg-grey1"
-                >
-                  Senior
-                </td>
-                <td
-                  style={{
-                    paddingTop: 12,
-
-                    paddingBottom: 12,
-                  }}
-                  className="fg-grey1"
-                >
-                  90/100
-                </td>
-                <td
-                  style={{
-                    paddingTop: 12,
-
-                    paddingBottom: 12,
-                  }}
-                  className="fg-grey1"
-                >
-                  ₦ 23,999.00
-                </td>
-                <td
-                  style={{
-                    paddingTop: 12,
-
-                    paddingBottom: 12,
-                  }}
-                  className=""
-                >
-                  <span
-                    className="fg-white bg-grey1 center br-4 f14"
-                    style={{ padding: "6px 14px" }}
-                  >
-                    More
-                  </span>
-                </td>
-              </tr>
-            ))}
-          </tbody>
-        </table>
+        <Table />
 
         <section className="next">
           <div className="backfront">
