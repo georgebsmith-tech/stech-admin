@@ -50,6 +50,8 @@ export * from "./ReportRow";
 export * from "./DeskModeContent";
 export * from "./DeskData";
 export * from "./DeskRow";
+export * from "./CartRow";
+export * from "./CartData";
 export * from "./ConfigureTableReport";
 
 export * from "./PageContents/SettingsContent";

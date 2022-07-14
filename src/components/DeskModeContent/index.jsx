@@ -1,9 +1,22 @@
-import React from "react";
+import React, { useState } from "react";
 import { DeskRow } from "../DeskRow";
+import { CartRow } from "../CartRow";
+import { CheckoutModal, ProcessingModal, SuccessModal } from "../modals";
 
 export const DeskModeContent = () => {
+  const [checkoutModal, setCheckoutModal] = useState(false);
+  const [processingModal, setProcessingModal] = useState(false);
+  const [successModal, setSuccessModal] = useState(false);
+
+  // checkoutModal = isOpen;
   return (
     <main>
+      <CheckoutModal isOpen={checkoutModal} closeModal={setCheckoutModal} />
+      <ProcessingModal
+        isOpen={processingModal}
+        closeModal={setProcessingModal}
+      />
+      <SuccessModal isOpen={successModal} closeModal={setSuccessModal} />
       <section className="deskgrid">
         <section className="deskgridOne">
           <div className="deskgridProduct">
@@ -26,6 +39,7 @@ export const DeskModeContent = () => {
               </div>
             </div>
           </div>
+
           <table>
             <thead>
               <th>S/N</th>
@@ -43,7 +57,41 @@ export const DeskModeContent = () => {
             </tbody>
           </table>
         </section>
-        <section></section>
+
+        <section className="cart">
+          <section className="deskgridProduct">
+            <h3>Cart</h3>
+          </section>
+
+          <table>
+            <thead>
+              <th>Product</th>
+              <th>Qty added</th>
+              <th>S. Price</th>
+              <th>Action</th>
+            </thead>
+            <tbody>
+              {[2, 4, 7, 3, 6, 8, 4].map((item, idx) => (
+                <CartRow />
+              ))}
+            </tbody>
+          </table>
+          <section className="bottomHolder">
+            <section className="checkout">
+              <div className="sumProducts">
+                <p>Total Price</p>
+                <p>N 1,200,990.00</p>
+              </div>
+              <button
+                onClick={() => {
+                  setSuccessModal(true);
+                }}
+              >
+                Check out
+              </button>
+            </section>
+          </section>
+        </section>
       </section>
     </main>
   );
