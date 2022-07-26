@@ -1,6 +1,5 @@
 import React, { useEffect, useRef, useState } from "react";
 import { Button, NewMessageModal, SearchInput } from "../..";
-import { socket } from "../../../config/socket.config";
 
 export const MessagingContent = () => {
   const [newMessageModalIsOpen, setNewMessageModalIsopen] = useState(false);
@@ -14,7 +13,7 @@ export const MessagingContent = () => {
             marginBottom: 18,
             padding: "38px 0px",
             flex: 0.3,
-            height: "90vh",
+            height: "90vh"
           }}
           className="bg-white"
         >
@@ -23,7 +22,7 @@ export const MessagingContent = () => {
             style={{
               padding: "0 24px 27px 24px",
               borderBottom: "1px solid rgba(219, 226, 223, 1)",
-              marginBottom: 24,
+              marginBottom: 24
             }}
           >
             <h2 className="f18 fg-dark1 fw500">Send Message</h2>
@@ -32,7 +31,7 @@ export const MessagingContent = () => {
               style={{
                 color: "rgba(64, 145, 108, 1)",
                 border: "none",
-                borderBottom: "1px solid rgba(64, 145, 108, 1)",
+                borderBottom: "1px solid rgba(64, 145, 108, 1)"
               }}
             >
               Send to all
@@ -95,9 +94,7 @@ const SendGroupMessageView = ({}) => {
   const scrollToBottom = () => {
     messageEndRef?.current.scrollIntoView({ behavior: "smooth" });
   };
-  const sendMessage = () => {
-    socket.emit("new_message", newMessage);
-  };
+  const sendMessage = () => {};
 
   useEffect(() => {
     scrollToBottom();
@@ -108,7 +105,7 @@ const SendGroupMessageView = ({}) => {
         style={{
           padding: "34px 32px",
           height: 88,
-          borderBottom: "1px solid rgba(219, 226, 223, 1)",
+          borderBottom: "1px solid rgba(219, 226, 223, 1)"
         }}
       >
         <h3 className="f16 fg-dark1">
@@ -128,7 +125,7 @@ const SendGroupMessageView = ({}) => {
           style={{
             padding: "34px 32px",
             // height: "100%",
-            borderTop: "1px solid rgba(219, 226, 223, 1)",
+            borderTop: "1px solid rgba(219, 226, 223, 1)"
           }}
           className="flex-col justify-end"
         >
@@ -140,7 +137,7 @@ const SendGroupMessageView = ({}) => {
                 width: "100%",
                 border: "1px solid rgba(219, 226, 223, 1)",
                 padding: 10,
-                display: "flex",
+                display: "flex"
                 // flex: 1,
               }}
               rows={5}
@@ -170,7 +167,7 @@ const SentMessage = () => (
       marginRight: 24,
       marginTop: 10,
       marginBottom: 15,
-      columnGap: 12,
+      columnGap: 12
     }}
     className="flex justify-end"
   >
@@ -203,7 +200,7 @@ const ReceivedMessage = () => (
       marginTop: 10,
       marginBottom: 15,
       columnGap: 12,
-      flexDirection: "row-reverse",
+      flexDirection: "row-reverse"
     }}
     className="flex justify-end"
   >
@@ -215,7 +212,7 @@ const ReceivedMessage = () => (
           columnGap: 12,
           marginTop: 6,
           flexDirection: "row-reverse",
-          justifyContent: "flex-end",
+          justifyContent: "flex-end"
         }}
       >
         <span className="fg-dark3 f10">30 mmins ago</span>
@@ -226,7 +223,7 @@ const ReceivedMessage = () => (
         style={{
           padding: 16,
           lineHeight: 1.7,
-          backgroundColor: "rgba(247, 247, 250, 1)",
+          backgroundColor: "rgba(247, 247, 250, 1)"
         }}
       >
         Okay, Can I also make use of the textbook that was attached to the
@@ -246,7 +243,7 @@ const MessagesList = () => {
         marginTop: 33,
         height: "80%",
         // backgroundColor: "red",
-        overflowY: "auto",
+        overflowY: "auto"
       }}
     >
       {[1, 2, 3, 4].map((message, idx) => (
@@ -283,7 +280,7 @@ const LastMessage = () => {
               width: 5,
               height: 5,
               backgroundColor: "rgba(64, 145, 108, 1)",
-              borderRadius: 100,
+              borderRadius: 100
             }}
           />
         </div>
