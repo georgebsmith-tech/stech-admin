@@ -26,22 +26,22 @@ export const DashboardContent = () => {
           {[
             {
               qty: "1,234,545,443",
-              unit: "NGN",
-              title: "TOTAL INCOME",
-              img: "income-chart.svg",
+              unit: "reports",
+              title: "TOTAL REPORTS",
+              img: "income-chart.svg"
             },
             {
               qty: "456",
-              unit: "Items",
-              title: "ITEMS IN STOCK",
-              img: "items-chart.svg",
+              unit: "students",
+              title: "STUDENTS",
+              img: "items-chart.svg"
             },
             {
               qty: "123",
-              unit: "Customers",
-              title: "NUMBER OF CUSTUMERS",
-              img: "customers-chart.svg",
-            },
+              unit: "members",
+              title: "NUMBER OF HOSPITALS/STAFF",
+              img: "customers-chart.svg"
+            }
           ].map((item, idx) => (
             <li
               key={idx}
@@ -65,7 +65,7 @@ export const DashboardContent = () => {
                   borderRadius: "100px 0 0 0",
                   position: "absolute",
                   right: 0,
-                  bottom: 0,
+                  bottom: 0
                 }}
                 className="center"
               >
@@ -78,12 +78,9 @@ export const DashboardContent = () => {
           ))}
         </ul>
       </section>
-      <section style={{ marginBottom: 16 }} className="bg-white">
-        <SplineChart />
-      </section>
-      <div className="flex" style={{ columnGap: 16 }}>
-        <ProductSalesRecord flex={0.6} />
-        <OutOfStock flex={0.4} />
+
+      <div>
+        <ProductSalesRecord />
       </div>
     </div>
   );

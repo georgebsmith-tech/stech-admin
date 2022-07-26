@@ -16,12 +16,7 @@ export const SettingsContent = ({ location }) => {
     <section>
       <nav>
         <ul className="flex" style={{ columnGap: 40 }}>
-          {[
-            { tab: "Personal Details" },
-            { tab: "Company Details" },
-            { tab: "Hardware Integration" },
-            { tab: "Roles & Permission" },
-          ].map((tab, idx) => (
+          {[{ tab: "Personal Details" }].map((tab, idx) => (
             <li
               onClick={() => setActiveTab(idx)}
               className={`hover pointer f16 fg-grey4 ${
@@ -35,7 +30,7 @@ export const SettingsContent = ({ location }) => {
                 color:
                   activeTab == idx
                     ? "rgba(64, 145, 108, 1)"
-                    : "rgba(111, 121, 117, 1)",
+                    : "rgba(111, 121, 117, 1)"
               }}
             >
               {tab.tab}
@@ -62,7 +57,7 @@ const PersonalDetails = () => {
               borderRadius: 100,
               position: "absolute",
               bottom: -75,
-              left: "10%",
+              left: "10%"
             }}
           >
             <img src="/images/avatar.svg" style={{ width: "100%" }} />
@@ -96,7 +91,7 @@ const PersonalDetails = () => {
           style={{
             paddingBottom: 21,
             borderBottom: "1px solid rgba(219, 226, 223, 1)",
-            marginBottom: 34,
+            marginBottom: 34
           }}
         >
           <h2 className="fw500 f16 fg-grey1">Change Password</h2>
@@ -148,7 +143,7 @@ const CompanyDetails = () => {
               borderRadius: 100,
               position: "absolute",
               bottom: -75,
-              left: "10%",
+              left: "10%"
             }}
           >
             <img src="/images/avatar.svg" style={{ width: "100%" }} />

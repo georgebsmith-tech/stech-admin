@@ -19,7 +19,7 @@ export const MainNav = ({ setNotificationIsOpen }) => {
         style={{
           width: navIsCollapsed ? "fit-content" : 320,
           height: "100vh",
-          overflow: "auto",
+          overflow: "auto"
         }}
       >
         <div style={{ padding: "48px 32px", width: "fit-content" }}>
@@ -28,9 +28,9 @@ export const MainNav = ({ setNotificationIsOpen }) => {
             className="justify-between flex align-center"
           >
             {navIsCollapsed ? (
-              <img src="/images/logo-only.svg" />
+              <h2 style={{ fontSize: 20, color: "#fff" }}>Stech</h2>
             ) : (
-              <img src="/images/logo-white.svg" />
+              <h2 style={{ fontSize: 30, color: "#fff" }}>Stech</h2>
             )}
 
             <img
@@ -43,7 +43,7 @@ export const MainNav = ({ setNotificationIsOpen }) => {
             <button
               style={{
                 padding: `21px ${navIsCollapsed ? 30 : 24}px`,
-                border: "1px solid #fff",
+                border: "1px solid #fff"
               }}
               className="br-4 transparent center hover"
               onClick={() => setUserModalIsOpen(true)}
@@ -67,50 +67,36 @@ export const MainNav = ({ setNotificationIsOpen }) => {
             {
               page: "Dashboard",
               img: "dashboard-active.svg",
-              link: "/dashboard",
+              link: "/dashboard"
             },
             {
               page: "Manage Users",
               img: "manage-users-active.svg",
-              link: "/manage-users",
+              link: "/manage-users"
             },
-            { page: "Wallet", img: "wallet-active.svg", link: "/wallet" },
+            { page: "Reports", img: "wallet-active.svg", link: "/reports" }
           ]}
         />
-        <NavSection
-          title="REPORT"
-          routes={[
-            {
-              page: "Attendance",
-              img: "dashboard-active.svg",
-              link: "/attendance",
-            },
-            {
-              page: "Stocks Inventory",
-              img: "manage-users-active.svg",
-              link: "/stocks-inventory",
-            },
-          ]}
-        />
+
         <NavSection
           title="PREFERENCES"
           routes={[
-            {
-              page: "Messaging",
-              img: "dashboard-active.svg",
-              link: "/messaging",
-            },
-            {
-              page: "Notifications",
-              img: "manage-users-active.svg",
-              link: "/notifications",
-              action: () => setNotificationIsOpen(true),
-            },
+            // {
+            //   page: "Messaging",
+            //   img: "dashboard-active.svg",
+            //   link: "/messaging"
+            // },
+            // {
+            //   page: "Notifications",
+            //   img: "manage-users-active.svg",
+            //   link: "/notifications",
+            //   action: () => setNotificationIsOpen(true)
+            // },
             {
               page: "Settings",
               img: "manage-users-active.svg",
-              link: "/settings",
-            },
+              link: "/settings"
+            }
           ]}
         />
       </nav>

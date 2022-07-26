@@ -7,7 +7,9 @@ export const Signin = () => {
       <section className="secmain">
         <div className="naviHold">
           <nav className="logoHold">
-            <img src="./images/logo-white.svg"></img>
+            <h1 className="fg-white" style={{ fontSize: 40 }}>
+              Stech
+            </h1>
           </nav>
         </div>
         <Details />

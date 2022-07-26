@@ -5,25 +5,16 @@ import React from "react";
 import {
   Dashbaord,
   Signin,
-  AttendanceHistory,
-  StocksInventory,
-  Attendance,
   CustomerProfile,
   ManageUsers,
-  Messaging,
-  ProductList,
-  NewService,
   Notifications,
   Settings,
-  Wallet,
-  DeskMode,
+  Reports
 } from "./pages";
 import { BrowserRouter, Route, Routes } from "react-router-dom";
 
-import { NewServiceBox } from "./pages/NewServiceBox";
 import { CustomerReport, SalesRegister } from "./components";
 import { SalesModal } from "./components/modals";
-import { socket } from "./config/socket.config";
 
 function App() {
   return (
@@ -32,23 +23,16 @@ function App() {
         <Route path="/" element={<Signin />}></Route>
 
         <Route path="dashboard" element={<Dashbaord />} />
-        <Route path="stocks-inventory" element={<StocksInventory />} />
-        <Route path="attendance" element={<Attendance />} />
-        <Route path="product-list" element={<ProductList />} />
-        <Route path="new-service" element={<NewService />} />
-        <Route path="sales-register" element={<SalesRegister />} />
-        <Route path="new-service-box" element={<NewServiceBox />} />
-        <Route path="sales-modal" element={<SalesModal />} />
-        <Route path="desk-mode" element={<DeskMode />} />
 
-        <Route path="attendance-history" element={<AttendanceHistory />} />
+        <Route path="sales-modal" element={<SalesModal />} />
+        <Route path="reports" element={<Reports />} />
+
         <Route path="customer-report" element={<CustomerReport />} />
         <Route path="customer-profile" element={<CustomerProfile />} />
         <Route path="manage-users" element={<ManageUsers />} />
-        <Route path="messaging" element={<Messaging />} />
+
         <Route path="notifications" element={<Notifications />} />
         <Route path="settings" element={<Settings />} />
-        <Route path="wallet" element={<Wallet />} />
       </Routes>
     </BrowserRouter>
   );
