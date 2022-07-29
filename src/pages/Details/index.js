@@ -2,6 +2,7 @@ import { Link } from "react-router-dom";
 import React, { useState } from "react";
 import toast, { Toaster } from "react-hot-toast";
 import { useNavigate } from "react-router-dom";
+import { postData } from "../../utils/services/postServices";
 export default function Details({}) {
   const [email, setEmail] = useState("");
 
@@ -17,27 +18,26 @@ export default function Details({}) {
   const notify = (message) => toast(message);
 
   async function login() {
-    // if (!email || !password) {
-    //   notify("Email and Password are required!");
-    //   return;
-    // }
-    // const resp = await fetch(
-    //   "https://gotruhub-api.herokuapp.com/api/v1/auth/agents/login",
-    //   {
-    //     method: "POST",
-    //     body: JSON.stringify(body),
-    //     headers: { "Content-type": "application/json" }
-    //   }
-    // );
-    // const data = await resp.json();
-    // if (data.error) {
-    //   notify(data.error.message);
-    //   return;
-    // }
+    try {
+      if (!email || !password) {
+        notify("Email and Password are required!");
+        return;
+      }
+      const data = await postData("/auth/login", body);
 
-    // localStorage.setItem("token", data.token);
+      if (data.error) {
+        notify(data.error.message);
+        return;
+      }
 
-    navigate("/dashboard");
+      localStorage.setItem("token", data.token);
+
+      navigate("/dashboard");
+    } catch (error) {
+      console.log(error);
+      notify(error.error.message);
+      return;
+    }
   }
 
   return (

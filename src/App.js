@@ -1,4 +1,3 @@
-import logo from "./logo.svg";
 import React from "react";
 
 // import { Signin } from "./pages/Signin";
@@ -13,7 +12,7 @@ import {
 } from "./pages";
 import { BrowserRouter, Route, Routes } from "react-router-dom";
 
-import { CustomerReport, SalesRegister } from "./components";
+import { CustomerReport } from "./components";
 import { SalesModal } from "./components/modals";
 
 function App() {

@@ -6,7 +6,7 @@ export const Arrival = ({ inOut, outIn }) => {
       <div className="updatedClockHolder">
         <div className="timein">
           <div>
-            <img src="./images/caution.svg" />
+            <img src="./images/caution.svg" alt="logo" />
           </div>
           <div className="first-child">Clock in Time</div>
           <div className="timer">{inOut}</div>

@@ -1,5 +1,5 @@
 import axios from "axios";
-import baseURL from "../../configs/baseURL";
+import baseURL from "../../config/baseURL";
 
 export const postData = async (path, body) => {
   try {
@@ -28,8 +28,8 @@ export const postProtectedData = async (path, body, token) => {
   try {
     const { data } = await axios.post(baseURL + path, body, {
       headers: {
-        authorization: "Bearer " + token, //the token is a variable which holds the token
-      },
+        authorization: "Bearer " + token //the token is a variable which holds the token
+      }
     });
 
     return data;

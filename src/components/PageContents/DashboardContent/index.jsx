@@ -2,9 +2,22 @@ import React, { useState } from "react";
 import { ProductSalesRecord, OutOfStock } from "../..";
 import { Switch } from "@mui/material";
 import SplineChart from "../../Charts/Spline Chart";
+import { useEffect } from "react";
+import { getProtectedData } from "../../../utils/services/getServices";
 
 export const DashboardContent = () => {
   const [isDeskMode, setIsDeskMode] = useState(false);
+
+  const [members, setMembers] = useState([]);
+  useEffect(() => {
+    const token = localStorage.getItem("token");
+    async function getData() {
+      const data = await getProtectedData("/users?limit=5", {}, token);
+
+      setMembers(data.data);
+    }
+    getData();
+  }, []);
   return (
     <div>
       <div
@@ -80,7 +93,7 @@ export const DashboardContent = () => {
       </section>
 
       <div>
-        <ProductSalesRecord />
+        <ProductSalesRecord members={members} setMembers={setMembers} />
       </div>
     </div>
   );
