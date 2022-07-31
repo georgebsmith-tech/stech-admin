@@ -6,7 +6,6 @@ import {
   Signin,
   CustomerProfile,
   ManageUsers,
-  Notifications,
   Settings,
   Reports
 } from "./pages";
@@ -30,7 +29,6 @@ function App() {
         <Route path="customer-profile" element={<CustomerProfile />} />
         <Route path="manage-users" element={<ManageUsers />} />
 
-        <Route path="notifications" element={<Notifications />} />
         <Route path="settings" element={<Settings />} />
       </Routes>
     </BrowserRouter>

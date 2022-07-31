@@ -1,17 +1,25 @@
-import React, { useState } from "react";
+import React, { useEffect, useState } from "react";
 import { Button, Input, HardwareIntegration, RulesAndPermission } from "../..";
 import { useSearchParams } from "react-router-dom";
+import { getProtectedData } from "../../../utils/services/getServices";
 
 export const SettingsContent = ({ location }) => {
   const [searchParams, setSearchParams] = useSearchParams();
   // setSearchParams({ hi: "yj" });
 
   const [activeTab, setActiveTab] = useState(0);
-  let content;
-  if (activeTab == 0) content = <PersonalDetails />;
-  else if (activeTab == 1) content = <CompanyDetails />;
-  else if (activeTab == 2) content = <HardwareIntegration />;
-  else if (activeTab == 3) content = <RulesAndPermission />;
+  const [user, setUser] = useState({});
+
+  useEffect(() => {
+    const token = localStorage.getItem("token");
+    console.log(token);
+
+    (async function () {
+      const data = await getProtectedData("/users/user", {}, token);
+      console.log(data);
+      setUser(data.user);
+    })();
+  }, []);
   return (
     <section>
       <nav>
@@ -38,12 +46,25 @@ export const SettingsContent = ({ location }) => {
           ))}
         </ul>
       </nav>
-      {content}
+      <PersonalDetails />
     </section>
   );
 };
 
-const PersonalDetails = () => {
+const PersonalDetails = ({ data }) => {
+  const [user, setUser] = useState({});
+
+  useEffect(() => {
+    const token = localStorage.getItem("token");
+    console.log(token);
+
+    (async function () {
+      const data = await getProtectedData("/users/user", {}, token);
+      console.log(data);
+      setUser(data.user);
+    })();
+  }, []);
+
   return (
     <>
       <section className="bg-white" style={{ padding: 24 }}>
@@ -65,17 +86,42 @@ const PersonalDetails = () => {
         </header>
         <section style={{ marginTop: 50, padding: 71 }}>
           <div className="flex" style={{ columnGap: 29 }}>
-            <Input placeholder="First Name" title="First Name" />
-            <Input placeholder="Last Name" title="Last Name" />
+            <Input
+              placeholder="First Name"
+              title="First Name"
+              value={user.firstName}
+              onChange={(e) => setUser({ ...user, firstName: e.target.value })}
+            />
+            <Input
+              placeholder="Last Name"
+              title="Last Name"
+              value={user.lastName}
+              onChange={(e) => setUser({ ...user, lastName: e.target.value })}
+            />
           </div>
 
           <div className="flex" style={{ columnGap: 29 }}>
-            <Input placeholder="brightbright@gmail.com" title="Email Address" />
-            <Input placeholder="090 998 9898" title="Phone number" />
+            <Input
+              placeholder="brightbright@gmail.com"
+              title="Email Address"
+              value={user.email}
+              onChange={(e) => setUser({ ...user, email: e.target.value })}
+            />
+            <Input
+              placeholder="090 998 9898"
+              title="Phone number"
+              value={user.phone}
+              onChange={(e) => setUser({ ...user, phone: e.target.value })}
+            />
           </div>
           <div className="flex" style={{ columnGap: 29 }}>
             <Input placeholder="Select date" title="Date of Birth" />
-            <Input placeholder="Select Gender" title="Gender" />
+            <Input
+              placeholder="Select Gender"
+              title="Gender"
+              value={user.gender}
+              onChange={(e) => setUser({ ...user, gender: e.target.value })}
+            />
           </div>
           <div className="flex justify-end" style={{ marginTop: 25 }}>
             <Button

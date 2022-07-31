@@ -8,5 +8,4 @@ export * from "./ManageUsers";
 
 export * from "./Settings";
 
-export * from "./Notifications";
 export * from "./Reports";
