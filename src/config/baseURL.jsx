@@ -2,6 +2,6 @@
 //   ? "http://localhost:5005/api/v1"
 //   : "https://mytownmart-api.herokuapp.com/api/v1";
 
-export default true
+export default !true
   ? "http://localhost:5005/api"
   : "https://stech-api.herokuapp.com/api";
