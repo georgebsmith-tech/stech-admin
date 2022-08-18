@@ -7,12 +7,16 @@ import { getProtectedData } from "../../../utils/services/getServices";
 
 export const DashboardContent = () => {
   const [isDeskMode, setIsDeskMode] = useState(false);
+  const [statistics, setStatistics] = useState({});
 
   const [members, setMembers] = useState([]);
   useEffect(() => {
     const token = localStorage.getItem("token");
     async function getData() {
       const data = await getProtectedData("/users?limit=5", {}, token);
+      const data1 = await getProtectedData("/statistics", {}, token);
+      // console.log(data1);
+      setStatistics(data1.data);
 
       setMembers(data.data);
     }
@@ -38,19 +42,19 @@ export const DashboardContent = () => {
         <ul className="grid3">
           {[
             {
-              qty: "1,234,545,443",
+              qty: statistics?.reportsCount || 0,
               unit: "reports",
               title: "TOTAL REPORTS",
               img: "income-chart.svg"
             },
+            // {
+            //   qty: "456",
+            //   unit: "students",
+            //   title: "STUDENTS",
+            //   img: "items-chart.svg"
+            // },
             {
-              qty: "456",
-              unit: "students",
-              title: "STUDENTS",
-              img: "items-chart.svg"
-            },
-            {
-              qty: "123",
+              qty: statistics?.usersCount || 0,
               unit: "members",
               title: "NUMBER OF HOSPITALS/STAFF",
               img: "customers-chart.svg"

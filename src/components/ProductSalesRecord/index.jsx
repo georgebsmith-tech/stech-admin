@@ -8,7 +8,7 @@ import { postProtectedData } from "../../utils/services/postServices";
 export const ProductSalesRecord = ({
   flex,
   members = [],
-  title = "Latest Members",
+  title = "Recent Viewers",
   setMembers
 }) => {
   const verifyAction = async (member, action) => {
